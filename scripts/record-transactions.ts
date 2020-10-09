@@ -25,8 +25,9 @@ const {
 	const lockup = createLockup(wallet)(lockupAddress)
 	const propertyGroup = createPropertyGroup(wallet)(propertyGroupAddress)
 
+	const event = dev.filters.Transfer()
 	const eventsTransfer = await provider.getLogs({
-		...dev.filters.Transfer(),
+		...event,
 		...{fromBlock: Number(fromBlock)},
 	})
 
