@@ -1,11 +1,13 @@
 {
 	"compilerOptions": {
+		"resolveJsonModule": true,
 		"target": "es2019",
 		"lib": ["es2019"],
 		"moduleResolution": "node",
 		"module": "commonjs",
 		"strict": true,
 		"skipLibCheck": true,
+		"esModuleInterop": true,
 		"typeRoots": ["./node_modules/@types", "./types"],
 		"types": ["node", "mocha"]
 	},
