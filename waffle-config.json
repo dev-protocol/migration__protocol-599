@@ -1,5 +1,6 @@
 {
 	"sourceDirectory": "./contracts",
 	"outputDirectory": "./build",
-	"nodeModulesDirectory": "./node_modules"
+	"nodeModulesDirectory": "./node_modules",
+	"compilerVersion": "0.5.17"
 }
