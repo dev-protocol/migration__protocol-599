@@ -19,6 +19,8 @@
 	],
 	"rules": {
 		"prettier/prettier": "error",
-		"@typescript-eslint/prefer-readonly-parameter-types": "warn"
+		"@typescript-eslint/prefer-readonly-parameter-types": "off",
+		"capitalized-comments": "off",
+		"new-cap": "off"
 	}
 }

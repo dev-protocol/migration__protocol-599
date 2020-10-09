@@ -1,6 +1,8 @@
 pragma solidity 0.5.17;
 
 contract ILegacyLockup {
+	event Lockedup(address _from, address _property, uint256 _value);
+
 	function difference(address _property, uint256 _lastReward)
 		public
 		view
