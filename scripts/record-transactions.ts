@@ -4,7 +4,12 @@ import {createDev} from './lib/dev'
 import {config} from 'dotenv'
 import {createLockup} from './lib/lockup'
 import {createPropertyGroup} from './lib/property-group'
-import {onlyDeposit, onlyDepositRelease} from './lib/transaction-filters'
+import {onlyStake, onlyUnstake} from './lib/transaction-filters'
+import {add} from './lib/collection'
+import {writeFile} from 'fs'
+import {promisify} from 'util'
+import {join} from 'path'
+import {addTransactionToLogs} from './lib/transaction'
 config()
 
 const {
@@ -31,12 +36,17 @@ const {
 		...{fromBlock: Number(fromBlock)},
 	})
 
-	const listDeposit = await onlyDeposit(eventsTransfer, propertyGroup)
-	const listDeposiRelease = await onlyDepositRelease(
-		eventsTransfer,
-		propertyGroup
-	)
+	const listStake = await onlyStake(eventsTransfer, propertyGroup)
+	const listUnstake = await onlyUnstake(eventsTransfer, propertyGroup)
+	const logs = [
+		...listStake.map(add({_action: 'stake'})),
+		...listUnstake.map(add({_action: 'unstake'})),
+	]
+	const records = await addTransactionToLogs(provider)(logs)
+	const sorted = records.sort((a, b) => a.blockNumber - b.blockNumber)
 
-	console.log('deposit', listDeposit)
-	console.log('release', listDeposiRelease)
+	await promisify(writeFile)(
+		join(__dirname, '..', 'data', 'staking.json'),
+		JSON.stringify(sorted)
+	)
 })().catch(console.error)
