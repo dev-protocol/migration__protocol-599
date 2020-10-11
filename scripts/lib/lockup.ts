@@ -19,3 +19,13 @@ export const createGetDifference = (contract: Contract) => (
 	]
 > =>
 	contract.functions.difference(property, String(last), {blockTag: blockNumber})
+
+export const createGetAllValue = (contract: Contract) => async (
+	blockNumber: number
+): Promise<[vale: BigNumber]> =>
+	contract.functions.getAllValue({blockTag: blockNumber})
+
+export const createGetPropertyValue = (contract: Contract) => (
+	property: string
+) => async (blockNumber: number): Promise<[vale: BigNumber]> =>
+	contract.functions.getPropertyValue(property, {blockTag: blockNumber})

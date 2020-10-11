@@ -1,21 +1,69 @@
 import {Contract} from 'ethers'
-import {Log} from '@ethersproject/abstract-provider'
 import {queue} from './queue'
-import {createGetDifference} from './lockup'
+import {
+	createGetAllValue,
+	createGetDifference,
+	createGetPropertyValue,
+} from './lockup'
+import {LogWithProperty} from './transaction-filters'
+
+const getCumulativeTotalRewards = async (
+	contract: Contract,
+	blockNumber: number
+): Promise<string> => {
+	const [value] = await createGetDifference(contract)()(blockNumber)
+	return value.toString()
+}
+
+const getTotalStaked = async (
+	contract: Contract,
+	blockNumber: number
+): Promise<string> => {
+	const [value] = await createGetAllValue(contract)(blockNumber)
+	return value.toString()
+}
+
+const getThePropertyStaked = async (
+	contract: Contract,
+	property: string,
+	blockNumber: number
+): Promise<string> => {
+	const [value] = await createGetPropertyValue(contract)(property)(blockNumber)
+	return value.toString()
+}
 
 export const addCumulativeTotalRewardsToLogs = (
 	addressFecther: (block: number) => Promise<string>,
 	lockupFactory: (address: string) => Contract
-) => async (
-	logs: Log[]
-): Promise<Array<Log & {_cumulativeTotalRewards: string}>> =>
+) => async <T extends LogWithProperty>(
+	logs: T[]
+): Promise<
+	Array<
+		T & {
+			_cumulativeTotalRewards: string
+			_totalStaked: string
+			_thePropertyStaked: string
+		}
+	>
+> =>
 	queue('addCumulativeTotalRewardsToLogs').addAll(
 		logs.map((log) => async () => {
 			const {blockNumber} = log
 			const address = await addressFecther(blockNumber)
 			const lockup = lockupFactory(address)
-			const [reward] = await createGetDifference(lockup)()(blockNumber)
-			const _cumulativeTotalRewards = reward.toString()
-			return {...log, ...{_cumulativeTotalRewards}}
+			const property = log._property
+			const [
+				_cumulativeTotalRewards,
+				_totalStaked,
+				_thePropertyStaked,
+			] = await Promise.all([
+				getCumulativeTotalRewards(lockup, blockNumber),
+				getTotalStaked(lockup, blockNumber),
+				getThePropertyStaked(lockup, property, blockNumber),
+			])
+			return {
+				...log,
+				...{_cumulativeTotalRewards, _totalStaked, _thePropertyStaked},
+			}
 		})
 	)

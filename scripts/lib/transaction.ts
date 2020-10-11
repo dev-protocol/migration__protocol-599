@@ -5,9 +5,9 @@ import {queue} from './queue'
 
 export const addTransactionToLogs = (
 	provider: ethers.providers.BaseProvider
-) => async (
-	logs: Log[]
-): Promise<Array<Log & {_transaction: TransactionResponse}>> =>
+) => async <T extends Log>(
+	logs: T[]
+): Promise<Array<T & {_transaction: TransactionResponse}>> =>
 	queue('addTransactionToLogs').addAll(
 		logs.map((log) => async () =>
 			provider

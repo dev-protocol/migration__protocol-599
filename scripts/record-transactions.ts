@@ -5,7 +5,7 @@ import {config} from 'dotenv'
 import {createLockup} from './lib/lockup'
 import {createPropertyGroup} from './lib/property-group'
 import {onlyStake, onlyUnstake} from './lib/transaction-filters'
-import {add} from './lib/collection'
+import {add, sortByBlockNumber} from './lib/collection'
 import {writeFile} from 'fs'
 import {promisify} from 'util'
 import {join} from 'path'
@@ -52,7 +52,7 @@ const {
 		...listUnstake.map(add({_action: 'unstake'})),
 	]
 	const records = await addTransaction(logs).then(addCumulativeTotalRewards)
-	const sorted = records.sort((a, b) => a.blockNumber - b.blockNumber)
+	const sorted = sortByBlockNumber(records)
 
 	await promisify(writeFile)(
 		join(__dirname, '..', 'data', 'staking.json'),
