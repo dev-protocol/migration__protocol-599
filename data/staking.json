@@ -19,7 +19,7 @@
 			"blockHash": "0xcf6ae7c2693265745a137c5aeed92950f01b9742f8be0ededb0f386832020978",
 			"blockNumber": 10997549,
 			"transactionIndex": 66,
-			"confirmations": 24273,
+			"confirmations": 34783,
 			"from": "0x3Faa7Fb92eE69bcaAcf6d878F48BB9F2476c35F3",
 			"gasPrice": {"type": "BigNumber", "hex": "0x1087ee0600"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x115548"},
@@ -32,7 +32,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "100843492648228435672861"
 	},
 	{
 		"blockNumber": 10998559,
@@ -54,7 +55,7 @@
 			"blockHash": "0x21188806bd3ac8d4bd611f44bea053b23ac3315a917a1725818ff42ef93e842c",
 			"blockNumber": 10998559,
 			"transactionIndex": 136,
-			"confirmations": 23263,
+			"confirmations": 33773,
 			"from": "0xF0Bc763e0A6AF4784a36fa102220FF60eC651f9e",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0b2d05e000"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x1390b6"},
@@ -67,7 +68,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "100993905658225409349491"
 	},
 	{
 		"blockNumber": 11001086,
@@ -89,7 +91,7 @@
 			"blockHash": "0x427cb5567143d7dbc5fa4efcec7f3ac9aa61751d724194d084c7410e939f7eb8",
 			"blockNumber": 11001086,
 			"transactionIndex": 21,
-			"confirmations": 20736,
+			"confirmations": 31246,
 			"from": "0x57b70Daf61548118B5be83d61A3A12Cd1211FD3c",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0c1b710800"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -102,7 +104,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "101369906234688332746609"
 	},
 	{
 		"blockNumber": 11001217,
@@ -124,7 +127,7 @@
 			"blockHash": "0x11d245e382245c5dbcf45d95391fc4f009d30e24848ad802448b9a9eb4310f0a",
 			"blockNumber": 11001217,
 			"transactionIndex": 219,
-			"confirmations": 20605,
+			"confirmations": 31115,
 			"from": "0x5BD8BD127A26448672549D52897438C9c4a73962",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0b68a0aa00"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0e85b9"},
@@ -137,7 +140,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "101389382290614589706640"
 	},
 	{
 		"blockNumber": 11003906,
@@ -159,7 +163,7 @@
 			"blockHash": "0xa86de466869d4c98dd94e1176722d3cb709c83b4908e818836199fb3fd17c719",
 			"blockNumber": 11003906,
 			"transactionIndex": 63,
-			"confirmations": 17916,
+			"confirmations": 28426,
 			"from": "0xE603eB00619E81d8b4954be13B59D7B6A2DC2B75",
 			"gasPrice": {"type": "BigNumber", "hex": "0x1176592e00"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0af147"},
@@ -172,7 +176,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "101788782837649373978005"
 	},
 	{
 		"blockNumber": 11006484,
@@ -194,7 +199,7 @@
 			"blockHash": "0x229a12be4afd837b2a923a4f8b82e3659278f945b7b625d72a265c9a9edb8cee",
 			"blockNumber": 11006484,
 			"transactionIndex": 49,
-			"confirmations": 15338,
+			"confirmations": 25848,
 			"from": "0x693443353EA0Dfc7D44ee5601c0C0Fa5f62b952b",
 			"gasPrice": {"type": "BigNumber", "hex": "0x07735945b3"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0adbb3"},
@@ -207,7 +212,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "102171793311540597909972"
 	},
 	{
 		"blockNumber": 11007514,
@@ -229,7 +235,7 @@
 			"blockHash": "0x51b6c990065ecd140f9059242ddec3564d2de747d5ddde76af3311a62834ab9d",
 			"blockNumber": 11007514,
 			"transactionIndex": 220,
-			"confirmations": 14308,
+			"confirmations": 24818,
 			"from": "0xC104738425b8A24f74dA8bd37e8A0BE88b16Dfb5",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0dbcac8e00"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0fb5ab"},
@@ -242,7 +248,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "102324809642779638800242"
 	},
 	{
 		"blockNumber": 11008641,
@@ -264,7 +271,7 @@
 			"blockHash": "0xb7413b9d5c267b08c0e1d0b3f72a76041a5a1765e1f05b372e8ceaa45f2ccb81",
 			"blockNumber": 11008641,
 			"transactionIndex": 70,
-			"confirmations": 13181,
+			"confirmations": 23691,
 			"from": "0x4f9E20a2a2cA3438e5Db6D36fA163772eef58483",
 			"gasPrice": {"type": "BigNumber", "hex": "0x09502f9000"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -277,7 +284,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "102492180691661936047663"
 	},
 	{
 		"blockNumber": 11010692,
@@ -299,7 +307,7 @@
 			"blockHash": "0x23eef5dfa053d0eaeccbe7ae7d4bb11ce052abeba23df87ab556f0e1daec41bd",
 			"blockNumber": 11010692,
 			"transactionIndex": 34,
-			"confirmations": 11130,
+			"confirmations": 21640,
 			"from": "0x3AE5381de8f6CA9e672ed55a3cD802286B45C9B4",
 			"gasPrice": {"type": "BigNumber", "hex": "0x09502f9000"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -312,7 +320,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "102796716860756174301292"
 	},
 	{
 		"blockNumber": 11014864,
@@ -334,7 +343,7 @@
 			"blockHash": "0x11bae5822e46dba055bc5a178e08c97c70bb44a1308994baaf940b28fa0b2b74",
 			"blockNumber": 11014864,
 			"transactionIndex": 123,
-			"confirmations": 6958,
+			"confirmations": 17468,
 			"from": "0xeBE1bbb18335beC74427C74dAC4cFBE685c7DcfF",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0ab5d04c00"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0af147"},
@@ -347,7 +356,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103416089253495095250685"
 	},
 	{
 		"blockNumber": 11016421,
@@ -369,7 +379,7 @@
 			"blockHash": "0x9697bc41c8e614608b62526f0de07cb09b85bcb915fcc8183ff545e354b7ce1a",
 			"blockNumber": 11016421,
 			"transactionIndex": 64,
-			"confirmations": 5401,
+			"confirmations": 15911,
 			"from": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
 			"gasPrice": {"type": "BigNumber", "hex": "0x174876e800"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -382,7 +392,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103647256860893576287636"
 	},
 	{
 		"blockNumber": 11016436,
@@ -404,7 +415,7 @@
 			"blockHash": "0x373bc223d6960d5c3e96b4e66fa2cc53ad9496df8ed51de038ba2be3a7b5c20a",
 			"blockNumber": 11016436,
 			"transactionIndex": 58,
-			"confirmations": 5386,
+			"confirmations": 15896,
 			"from": "0x41A57396bb3e9672f60fDd096F7Bd94a4A9eeb1E",
 			"gasPrice": {"type": "BigNumber", "hex": "0x174876e800"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -417,7 +428,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103649483211526797336841"
 	},
 	{
 		"blockNumber": 11017356,
@@ -439,7 +451,7 @@
 			"blockHash": "0x3b3d5c501c0adca61524603e1bc9a6c576fd7d6a630a12be5a35381d18454aa1",
 			"blockNumber": 11017356,
 			"transactionIndex": 25,
-			"confirmations": 4466,
+			"confirmations": 14976,
 			"from": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0e33e22200"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x11555a"},
@@ -452,7 +464,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103785947246006038724881"
 	},
 	{
 		"blockNumber": 11018362,
@@ -474,7 +487,7 @@
 			"blockHash": "0xebdd94283bece3788663ad19f0f2be1a81041d83d3e937ccb3b33df467f8b9b6",
 			"blockNumber": 11018362,
 			"transactionIndex": 76,
-			"confirmations": 3460,
+			"confirmations": 13970,
 			"from": "0xA99403A37f8F56Eb4fF7bB51c214C6C3Ab0CB839",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0861c46800"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x100ef4"},
@@ -487,7 +500,8 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103935136037126622177055"
 	},
 	{
 		"blockNumber": 11018658,
@@ -509,7 +523,7 @@
 			"blockHash": "0xd1d6f04de219f59b3f02a0c67dd7f65c3df4267ffa9f5acd7ad8728f40aea219",
 			"blockNumber": 11018658,
 			"transactionIndex": 83,
-			"confirmations": 3164,
+			"confirmations": 13674,
 			"from": "0xd8655066Cd6d6757dd227D43BB12d8E0d9d36B7f",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0b2d05e000"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0af147"},
@@ -522,7 +536,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "103979030174942454456903"
 	},
 	{
 		"blockNumber": 11021173,
@@ -544,7 +559,7 @@
 			"blockHash": "0xcf9685a9947d552d7fd19db0feb83ccbe178289aff4ddf1d2d3b0fbe9f4ff694",
 			"blockNumber": 11021173,
 			"transactionIndex": 136,
-			"confirmations": 649,
+			"confirmations": 11159,
 			"from": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
 			"gasPrice": {"type": "BigNumber", "hex": "0x0c570bd200"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x0af147"},
@@ -557,7 +572,8 @@
 			"v": 37,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "104351986585491918468053"
 	},
 	{
 		"blockNumber": 11021247,
@@ -579,7 +595,7 @@
 			"blockHash": "0x5b9deaa7c4b9a58c309bff280fbcefdf08e6917d74d3a970ddc310a6d9479152",
 			"blockNumber": 11021247,
 			"transactionIndex": 97,
-			"confirmations": 575,
+			"confirmations": 11085,
 			"from": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
 			"gasPrice": {"type": "BigNumber", "hex": "0x14b8d03a00"},
 			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
@@ -592,6 +608,295 @@
 			"v": 38,
 			"creates": null,
 			"chainId": 1
-		}
+		},
+		"_cumulativeTotalRewards": "104362962583367263612037"
+	},
+	{
+		"blockNumber": 11022177,
+		"blockHash": "0x13b734da581c7483db4003d49269d7ec34d94c8768e6adc1828747cc1499ab55",
+		"transactionIndex": 145,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x00000000000000000000000000000000000000000000003635c9adc5dea00000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x000000000000000000000000cebd1bf31df3e3697ea26e2f94f9e3644c809f46",
+			"0x0000000000000000000000006990f87dc2bffbd9a52694b1d3d963f62cd09eb7"
+		],
+		"transactionHash": "0x5790e753bbfe9618061a2050214afe44acdd6a795a85000373cfc399eb17fb68",
+		"logIndex": 288,
+		"_action": "unstake",
+		"_transaction": {
+			"hash": "0x5790e753bbfe9618061a2050214afe44acdd6a795a85000373cfc399eb17fb68",
+			"blockHash": "0x13b734da581c7483db4003d49269d7ec34d94c8768e6adc1828747cc1499ab55",
+			"blockNumber": 11022177,
+			"transactionIndex": 145,
+			"confirmations": 10155,
+			"from": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
+			"gasPrice": {"type": "BigNumber", "hex": "0x14f46b0400"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x0af147"},
+			"to": "0x474956cF9FAb3f5792d4ab86Ad6d59DB27748ec2",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 1325,
+			"data": "0x51cff8d9000000000000000000000000cebd1bf31df3e3697ea26e2f94f9e3644c809f46",
+			"r": "0x8996cb0e85cef707717d4bcff68935f9d9768cc8777bcd62e26b1d8549bec512",
+			"s": "0x0477dbb4a69f4cce6290ac56284e8640ce64edd45c8f99e5b23915dedbf760eb",
+			"v": 38,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "104500874895479999249357"
+	},
+	{
+		"blockNumber": 11022255,
+		"blockHash": "0xf2bc23429cf460d1b139d3160f15b81337f5152f907dd7ca0958a1eaaaf366f7",
+		"transactionIndex": 60,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x000000000000000000000000000000000000000000000036f813ab9906180000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x0000000000000000000000006990f87dc2bffbd9a52694b1d3d963f62cd09eb7",
+			"0x00000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f"
+		],
+		"transactionHash": "0x0e40c21f8666afb106f2fb84d2ee85746dace494ada03acb0697177a99e92ca7",
+		"logIndex": 141,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0x0e40c21f8666afb106f2fb84d2ee85746dace494ada03acb0697177a99e92ca7",
+			"blockHash": "0xf2bc23429cf460d1b139d3160f15b81337f5152f907dd7ca0958a1eaaaf366f7",
+			"blockNumber": 11022255,
+			"transactionIndex": 60,
+			"confirmations": 10077,
+			"from": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
+			"gasPrice": {"type": "BigNumber", "hex": "0x1960e80200"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 1326,
+			"data": "0x47e7ef2400000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f000000000000000000000000000000000000000000000036f813ab9906180000",
+			"r": "0x88e7973c3f8ad223d36005b32a84b9e394ee12f6ce2c4e603d02466256aabb85",
+			"s": "0x156d62860d9099cd8b50d985e211b12132f1b2e602c5a2b8455088bfbcfe276d",
+			"v": 37,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "104512448982206732250425"
+	},
+	{
+		"blockNumber": 11022427,
+		"blockHash": "0x9974596d68e6b051f3b4244acc75e7c0a0e5ac60f937aee657616d96ce7cbdc6",
+		"transactionIndex": 127,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x00000000000000000000000000000000000000000000001fb56ff171f3cf8000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x00000000000000000000000084942ff5f39e4c32fb3596c06478af36d2e1045d",
+			"0x00000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f"
+		],
+		"transactionHash": "0xdc3938fd73fa45d84e7d5b9f7b31c2eee24d21aa44f9a4f4dfb546a99409b1b7",
+		"logIndex": 185,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0xdc3938fd73fa45d84e7d5b9f7b31c2eee24d21aa44f9a4f4dfb546a99409b1b7",
+			"blockHash": "0x9974596d68e6b051f3b4244acc75e7c0a0e5ac60f937aee657616d96ce7cbdc6",
+			"blockNumber": 11022427,
+			"transactionIndex": 127,
+			"confirmations": 9905,
+			"from": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
+			"gasPrice": {"type": "BigNumber", "hex": "0x199c82cc00"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x100f06"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 853,
+			"data": "0x47e7ef2400000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f00000000000000000000000000000000000000000000001fb56ff171f3cf8000",
+			"r": "0x253d336a46c9682c768bfb0359a600598cdcac0eb0aa0b5f24fe3e589882dc62",
+			"s": "0x5bd3734bf05b8502ce3aff5a30cc3f6cc092ae6bbc571c3a19a1d073ed9e5cf4",
+			"v": 37,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "104537955128685129375477"
+	},
+	{
+		"blockNumber": 11022654,
+		"blockHash": "0x246b9159261a5aa9e555a43ec9fea483802e13064173fc7d20249239a85b69e3",
+		"transactionIndex": 107,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x00000000000000000000000000000000000000000000001b1ae4d6e2ef500000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x000000000000000000000000dec6c15126a94a507e2c27c6727cedc85bfdf3b7",
+			"0x00000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f"
+		],
+		"transactionHash": "0x57909f3cd0a2bd913f06722048d5d09efbc3c6cd320d4a33749bf3945b6b7acc",
+		"logIndex": 312,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0x57909f3cd0a2bd913f06722048d5d09efbc3c6cd320d4a33749bf3945b6b7acc",
+			"blockHash": "0x246b9159261a5aa9e555a43ec9fea483802e13064173fc7d20249239a85b69e3",
+			"blockNumber": 11022654,
+			"transactionIndex": 107,
+			"confirmations": 9678,
+			"from": "0xDEC6C15126A94A507E2c27C6727cedc85bFDf3B7",
+			"gasPrice": {"type": "BigNumber", "hex": "0x089d5f37b3"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 27,
+			"data": "0x47e7ef2400000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f00000000000000000000000000000000000000000000001b1ae4d6e2ef500000",
+			"r": "0xe6440bca520fa1d1ab30ae4f6db51d88a26e57530232694e6a8c4ec8299b5eb5",
+			"s": "0x17fa0fab4b06a4c3bc76dcc316b2354a5b05906576760724a707edc6e6a2517d",
+			"v": 37,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "104571604984704030957259"
+	},
+	{
+		"blockNumber": 11023736,
+		"blockHash": "0x64196f3281e3a9040706bfff3a35e31c2faddd65e926903454786dc6308e4d0f",
+		"transactionIndex": 114,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x00000000000000000000000000000000000000000000000ca18649835a040000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x0000000000000000000000005bd8bd127a26448672549d52897438c9c4a73962",
+			"0x0000000000000000000000000f60d5036d0306b0ab20027fb4bfdb10183366ca"
+		],
+		"transactionHash": "0x14b50ae307a80fec19dbf0e71baaa198ce3f2c3312c64e78d665b9ffdddb5ba1",
+		"logIndex": 176,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0x14b50ae307a80fec19dbf0e71baaa198ce3f2c3312c64e78d665b9ffdddb5ba1",
+			"blockHash": "0x64196f3281e3a9040706bfff3a35e31c2faddd65e926903454786dc6308e4d0f",
+			"blockNumber": 11023736,
+			"transactionIndex": 114,
+			"confirmations": 8596,
+			"from": "0x5BD8BD127A26448672549D52897438C9c4a73962",
+			"gasPrice": {"type": "BigNumber", "hex": "0x07ea8ed400"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x0dead3"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 658,
+			"data": "0x47e7ef240000000000000000000000000f60d5036d0306b0ab20027fb4bfdb10183366ca00000000000000000000000000000000000000000000000ca18649835a040000",
+			"r": "0x29f808b75de08f0e553da9141f95f326e386611b107b191e0819f16014508cef",
+			"s": "0x77c3b32795a3e92dae6bd72e4f526638af46fd2e7ad4b6f1e9313399c58deb7c",
+			"v": 38,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "104731947487408876584723"
+	},
+	{
+		"blockNumber": 11027707,
+		"blockHash": "0x78719576eb333be3b7d50dba3745a540cddca315f1053f67cc4fed372aeb5c8e",
+		"transactionIndex": 111,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x0000000000000000000000000000000000000000000000015af1d78b58c40000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x0000000000000000000000005ea617fed16185736c42d3f572c536905fc6ef28",
+			"0x00000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f"
+		],
+		"transactionHash": "0x8b569343af2fe2777afb14b2ca08181c71d6dafcc1ce716fd04835447ffb9684",
+		"logIndex": 196,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0x8b569343af2fe2777afb14b2ca08181c71d6dafcc1ce716fd04835447ffb9684",
+			"blockHash": "0x78719576eb333be3b7d50dba3745a540cddca315f1053f67cc4fed372aeb5c8e",
+			"blockNumber": 11027707,
+			"transactionIndex": 111,
+			"confirmations": 4625,
+			"from": "0x5ea617FeD16185736C42D3f572c536905fC6ef28",
+			"gasPrice": {"type": "BigNumber", "hex": "0x0d52b26d80"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 123,
+			"data": "0x47e7ef2400000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f0000000000000000000000000000000000000000000000015af1d78b58c40000",
+			"r": "0x6ffdbd94e2eed41c2698bfbd2e5269cc5bbde49ed204d81ede3fd86554548382",
+			"s": "0x50821a6dff33c6bb8a34e3f237af4452d5586aff29a0d35d66cbdad25213c206",
+			"v": 37,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "105320328519228994654853"
+	},
+	{
+		"blockNumber": 11030697,
+		"blockHash": "0xdfbbc74f857d3dc0d34caa080e8cb00b0b3c40e61047cbf3bb747aee4759f256",
+		"transactionIndex": 41,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x000000000000000000000000000000000000000000000012c1b6eed03d280000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x00000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f",
+			"0x000000000000000000000000f22b3e9fdfac016fa197c2326c84657ba4f78f78"
+		],
+		"transactionHash": "0xa6712a3236ffc2ecd3d9022496ae677a142b54019880830791453c4cd42d4b2a",
+		"logIndex": 165,
+		"_action": "unstake",
+		"_transaction": {
+			"hash": "0xa6712a3236ffc2ecd3d9022496ae677a142b54019880830791453c4cd42d4b2a",
+			"blockHash": "0xdfbbc74f857d3dc0d34caa080e8cb00b0b3c40e61047cbf3bb747aee4759f256",
+			"blockNumber": 11030697,
+			"transactionIndex": 41,
+			"confirmations": 1635,
+			"from": "0xf22B3e9FDfac016Fa197C2326c84657ba4f78f78",
+			"gasPrice": {"type": "BigNumber", "hex": "0x0684ee1800"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x0af191"},
+			"to": "0x474956cF9FAb3f5792d4ab86Ad6d59DB27748ec2",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 182,
+			"data": "0x51cff8d900000000000000000000000090168f9ba07b95f629f8b77f789d46a549d6470f",
+			"r": "0x95748736f1eec3153b171b49566b1050ae7f947da12ddc51b5d762b64197bbb4",
+			"s": "0x2ba220ecb68f5e009adbae53a9b25c9141d5596d9092791342109f4b962c3771",
+			"v": 38,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "105763349092846863647535"
+	},
+	{
+		"blockNumber": 11031134,
+		"blockHash": "0xe304886d79423346041d1994869841bf93fc11abd48064e601f8b9f3f536c98b",
+		"transactionIndex": 12,
+		"removed": false,
+		"address": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+		"data": "0x000000000000000000000000000000000000000000000018650127cc3dc80000",
+		"topics": [
+			"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+			"0x0000000000000000000000001143d16a0276653a3be32b298ceff28067d5f85d",
+			"0x0000000000000000000000006ac804a994d01f3e8da3e23774632bd48f107fc9"
+		],
+		"transactionHash": "0x8df439eaa327b1ec89118bb109412ac1d9f8fe892467640db4e8674d905dea96",
+		"logIndex": 50,
+		"_action": "stake",
+		"_transaction": {
+			"hash": "0x8df439eaa327b1ec89118bb109412ac1d9f8fe892467640db4e8674d905dea96",
+			"blockHash": "0xe304886d79423346041d1994869841bf93fc11abd48064e601f8b9f3f536c98b",
+			"blockNumber": 11031134,
+			"transactionIndex": 12,
+			"confirmations": 1198,
+			"from": "0x1143D16a0276653a3be32B298CEFF28067d5f85D",
+			"gasPrice": {"type": "BigNumber", "hex": "0x0773594000"},
+			"gasLimit": {"type": "BigNumber", "hex": "0x10c1af"},
+			"to": "0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26",
+			"value": {"type": "BigNumber", "hex": "0x00"},
+			"nonce": 0,
+			"data": "0x47e7ef240000000000000000000000006ac804a994d01f3e8da3e23774632bd48f107fc9000000000000000000000000000000000000000000000018650127cc3dc80000",
+			"r": "0xeca672c7c85e21f58cd5112b986a908f3ec178817fa9bcb64ab883e1eac12524",
+			"s": "0x627ab2ebd288a89aa3996fc63d8f704dfe8ccd9fea25c7945cb6e3e7daf65945",
+			"v": 38,
+			"creates": null,
+			"chainId": 1
+		},
+		"_cumulativeTotalRewards": "105828112293358945267861"
 	}
 ]
