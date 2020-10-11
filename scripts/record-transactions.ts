@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {createWallet} from './lib/client'
 import {createDev} from './lib/dev'
 import {config} from 'dotenv'
@@ -19,7 +18,6 @@ const {
 	MNEMONIC: mnemonic,
 	CONFIG: configAddress = '0x1d415aa39d647834786eb9b5a333a50e9935b796',
 	DEV: devAddress = '0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26',
-	LOCKUP: lockupAddress = '0x474956cf9fab3f5792d4ab86ad6d59db27748ec2',
 	PROPERTY_GROUP: propertyGroupAddress = '0x7ba9c52453d2520e1484f99ae5b2e800cd781aa5',
 	FROM_BLOCK: fromBlock = '10358615',
 } = process.env
