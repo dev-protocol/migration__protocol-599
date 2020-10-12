@@ -7,15 +7,20 @@ import {IterableElement} from 'type-fest'
 
 const findLastTransactions = (
 	data: typeof computed,
-	createKey: (el: IterableElement<typeof data>) => string
+	createKey: (el: IterableElement<typeof data>) => string,
+	targetAction: string[]
 ) => {
 	const last: Map<string, IterableElement<typeof data>> = new Map()
 	for (const iterator of data) {
+		const {action, blockNumber} = iterator
+		if (!targetAction.includes(action)) {
+			continue
+		}
+
 		const key = createKey(iterator)
-		const blockNumber = iterator.blockNumber
 		const got = last.get(key)
 		if (got && blockNumber < got.blockNumber) {
-			break
+			continue
 		}
 
 		last.set(key, iterator)
@@ -25,10 +30,24 @@ const findLastTransactions = (
 }
 
 const shouldInitStakeOnProperty = (data: typeof computed) =>
-	findLastTransactions(data, (x) => `${x.hookedProperty}${x.hookedUser}`)
+	findLastTransactions(
+		data,
+		(x) => `stake-or-unstake-${x.hookedProperty}${x.hookedUser}`,
+		['stake', 'unstake']
+	)
 
 const shouldInitLastStakeOnProperty = (data: typeof computed) =>
-	findLastTransactions(data, (x) => x.hookedProperty)
+	findLastTransactions(data, (x) => x.hookedProperty, ['stake', 'unstake'])
+
+const shouldInitLastStake = (data: typeof computed) =>
+	findLastTransactions(data, () => 'stake-or-unstake', ['stake', 'unstake'])
+
+const shouldinitLastWithdraw = (data: typeof computed) =>
+	findLastTransactions(
+		data,
+		(x) => `withdraw-${x.hookedProperty}${x.hookedUser}`,
+		['withdraw']
+	)
 
 ;(async () => {
 	const computedRecords = sortByBlockNumber(computed)
@@ -36,11 +55,14 @@ const shouldInitLastStakeOnProperty = (data: typeof computed) =>
 	const __initLastStakeOnProperty = shouldInitLastStakeOnProperty(
 		computedRecords
 	)
-	const __initLastStake = computedRecords[computedRecords.length - 1]
+	const __initLastStake = shouldInitLastStake(computedRecords)
+	const __initLastWithdraw = shouldinitLastWithdraw(computedRecords)
+
 	const records = {
 		__initStakeOnProperty,
 		__initLastStakeOnProperty,
 		__initLastStake,
+		__initLastWithdraw,
 	}
 
 	await promisify(writeFile)(

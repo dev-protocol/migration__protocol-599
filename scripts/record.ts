@@ -3,7 +3,11 @@ import {createDev} from './lib/dev'
 import {config} from 'dotenv'
 import {createLockup} from './lib/lockup'
 import {createPropertyGroup} from './lib/property-group'
-import {onlyStake, onlyUnstake} from './lib/transaction-filters'
+import {
+	onlyPropertyWithdraw,
+	onlyStake,
+	onlyUnstake,
+} from './lib/transaction-filters'
 import {add, sortByBlockNumber} from './lib/collection'
 import {writeFile} from 'fs'
 import {promisify} from 'util'
@@ -43,13 +47,16 @@ const {
 		...{fromBlock: Number(fromBlock)},
 	})
 
-	const listStake = await onlyStake(eventsTransfer, propertyGroup)
-	const listUnstake = await onlyUnstake(eventsTransfer, propertyGroup)
+	const logWithTx = await addTransaction(eventsTransfer)
+	const listStake = await onlyStake(logWithTx, propertyGroup)
+	const listUnstake = await onlyUnstake(logWithTx, propertyGroup)
+	const listWithdraw = await onlyPropertyWithdraw(logWithTx)
 	const logs = [
 		...listStake.map(add({_action: 'stake'})),
 		...listUnstake.map(add({_action: 'unstake'})),
+		...listWithdraw.map(add({_action: 'withdraw'})),
 	]
-	const records = await addTransaction(logs).then(addCumulativeTotalRewards)
+	const records = await addCumulativeTotalRewards(logs)
 	const sorted = sortByBlockNumber(records)
 
 	await promisify(writeFile)(

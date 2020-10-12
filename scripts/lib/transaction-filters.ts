@@ -1,6 +1,9 @@
 import {Contract} from 'ethers'
 import {Log} from '@ethersproject/abstract-provider'
 import {queue} from './queue'
+import {IterableElement, PromiseValue} from 'type-fest'
+import {addTransactionToLogs} from './transaction'
+import {WITHDRAW} from './constants'
 
 export type IsPropertyResponse = {
 	_property?: string
@@ -10,9 +13,13 @@ export type IsPropertyResponse = {
 export type OnlyPropertyResponse = IsPropertyResponse & {
 	_property: string
 }
-export type LogWithProperty = Log & {
-	_property: string
-}
+export type LogWithTransaction = IterableElement<
+	PromiseValue<ReturnType<ReturnType<typeof addTransactionToLogs>>>
+>
+export type LogWithProperty<T = Log> = T &
+	Log & {
+		_property: string
+	}
 
 const hexToAddress = (hex: string): string | undefined =>
 	((x) => (x ? `${x[1]}${x[2]}` : undefined))(/^(0x).{24}(.{40})/.exec(hex))
@@ -26,7 +33,7 @@ const getRecipientAddress = (topics: string[]): string | undefined =>
 const isProperty = (
 	address: (topics: string[]) => string | undefined,
 	propertyGroup: Contract
-) => ({transactionHash, topics}: Log) => async (): Promise<
+) => <T extends Log>({transactionHash, topics}: T) => async (): Promise<
 	IsPropertyResponse
 > => {
 	const property = address(topics)
@@ -40,9 +47,11 @@ const isProperty = (
 	}
 }
 
-const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async (
-	logs: readonly Log[]
-): Promise<readonly LogWithProperty[]> => {
+const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async <
+	T extends Log
+>(
+	logs: readonly T[]
+): Promise<ReadonlyArray<LogWithProperty<T>>> => {
 	const find = (a: IsPropertyResponse[], b: Log) =>
 		a.find((x) => x.transactionHash === b.transactionHash)
 	const res = await queue('onlyProperty').addAll(logs.map(filterFn))
@@ -56,14 +65,32 @@ const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async (
 		}))
 }
 
-export const onlyStake = async (
-	logs: readonly Log[],
+export const onlyStake = async <T extends Log>(
+	logs: readonly T[],
 	propertyGroup: Contract
-): Promise<readonly LogWithProperty[]> =>
+): Promise<ReadonlyArray<LogWithProperty<T>>> =>
 	onlyProperty(isProperty(getRecipientAddress, propertyGroup))(logs)
 
-export const onlyUnstake = async (
-	logs: readonly Log[],
+export const onlyUnstake = async <T extends Log>(
+	logs: readonly T[],
 	propertyGroup: Contract
-): Promise<readonly LogWithProperty[]> =>
+): Promise<ReadonlyArray<LogWithProperty<T>>> =>
 	onlyProperty(isProperty(getSenderAddress, propertyGroup))(logs)
+
+export const onlyPropertyWithdraw = async <T extends LogWithTransaction>(
+	logs: readonly T[]
+): Promise<ReadonlyArray<LogWithProperty<T>>> =>
+	onlyProperty((el) => async (): Promise<IsPropertyResponse> => {
+		const {
+			transactionHash,
+			_transaction,
+		} = (el as unknown) as LogWithTransaction
+		const {data} = _transaction
+		const yes = data.startsWith(WITHDRAW)
+		const property = `0x${data.slice(-40)}`
+		return {
+			_property: property,
+			transactionHash,
+			yes,
+		}
+	})(logs)

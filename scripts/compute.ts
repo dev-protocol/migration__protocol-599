@@ -10,12 +10,14 @@ import {sortByBlockNumber} from './lib/collection'
 type Rewards = {
 	transactionHash: string
 	blockNumber: number
+	action: string
 	hookedUser: string
 	hookedProperty: string
 	rewards: {
 		total: string
 		interestPrice: string
 		holdersPrice: string
+		holdersPriceForLastWithdrawnReward: string
 		cumulativeHoldersAmountPerProperty: string
 	}
 }
@@ -40,6 +42,7 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 ;(async () => {
 	const records = sortByBlockNumber(stakingRecords).map(
 		(record): Rewards => {
+			const action = record._action
 			const transactionHash = record.transactionHash
 			const blockNumber = record.blockNumber
 			const hookedUser = record._transaction.from
@@ -61,11 +64,6 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 			const holdersPrice = holdersShare.add(lastCHoldersReward)
 			const interestPrice = price.sub(holdersShare).add(lastCInterest)
 
-			// Store computed latest global values
-			storage.set('LastCumulativeReward', mTotal)
-			storage.set('LastCumulativeHoldersRewardPrice', holdersPrice)
-			storage.set('LastCumulativeInterestPrice', interestPrice)
-
 			// Compute latest values about the Property
 			const lastCHoldersPProperty = lastCumulativeHoldersRewardsPerProperty.get(
 				hookedProperty
@@ -75,20 +73,33 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 				.mul(propertyStaked)
 				.add(lastCHoldersPProperty?.amount ?? zero)
 
-			lastCumulativeHoldersRewardsPerProperty.set(hookedProperty, {
-				amount: cumulativeHoldersAmountPerProperty,
-				price: holdersPrice,
-			})
+			// Store computed latest values
+			if (action === 'stake' || action === 'unstake') {
+				storage.set('LastCumulativeReward', mTotal)
+				storage.set('LastCumulativeHoldersRewardPrice', holdersPrice)
+				storage.set('LastCumulativeInterestPrice', interestPrice)
+				lastCumulativeHoldersRewardsPerProperty.set(hookedProperty, {
+					amount: cumulativeHoldersAmountPerProperty,
+					price: holdersPrice,
+				})
+			}
+
+			const holdersPriceForLastWithdrawnReward = holdersPrice
+				.sub(lastCHoldersPProperty?.price ?? zero)
+				.mul(record._thePropertyStaked)
+				.add(lastCHoldersPProperty?.amount ?? zero)
 
 			return {
 				transactionHash,
 				blockNumber,
+				action,
 				hookedUser,
 				hookedProperty,
 				rewards: {
 					total: mTotal.toString(),
 					interestPrice: interestPrice.toString(),
 					holdersPrice: holdersPrice.toString(),
+					holdersPriceForLastWithdrawnReward: holdersPriceForLastWithdrawnReward.toString(),
 					cumulativeHoldersAmountPerProperty: cumulativeHoldersAmountPerProperty.toString(),
 				},
 			}
