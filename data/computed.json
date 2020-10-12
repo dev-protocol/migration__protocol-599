@@ -1,0 +1,365 @@
+[
+	{
+		"transactionHash": "0xa4975cb248f92930621496de7f58469f6c7c26d6ea6ec78598dd2879221de5e0",
+		"blockNumber": 10997549,
+		"hookedUser": "0x3Faa7Fb92eE69bcaAcf6d878F48BB9F2476c35F3",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "127454650224374906",
+			"holdersPrice": "132656880845777962",
+			"cumulativeHoldersAmountPerProperty": "6238001064296953205587870200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x0fe555d8a2f3997112e5a76eb63f4e736e08b3a716faf66e9aabfb82f0600213",
+		"blockNumber": 10998559,
+		"hookedUser": "0xF0Bc763e0A6AF4784a36fa102220FF60eC651f9e",
+		"hookedProperty": "0xcbab4c606dc2eefe5aa716d4892d272040fca053",
+		"rewards": {
+			"interestPrice": "127644131037241021",
+			"holdersPrice": "132854095569373306",
+			"cumulativeHoldersAmountPerProperty": "26570819113874661200000000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x0714bb5df61f8ad45b2ff792f018bb48656e7cf29bc0ad0e7b828a2112362726",
+		"blockNumber": 11001086,
+		"hookedUser": "0x57b70Daf61548118B5be83d61A3A12Cd1211FD3c",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "128116094110438340",
+			"holdersPrice": "133345322441476636",
+			"cumulativeHoldersAmountPerProperty": "13881201381960331046629736400000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xaf1855796ccf8f98a3ac4dd790f2626feda34c48497a571c5cf0c799d6dce090",
+		"blockNumber": 11001217,
+		"hookedUser": "0x5BD8BD127A26448672549D52897438C9c4a73962",
+		"hookedProperty": "0x0f60d5036d0306b0ab20027fb4bfdb10183366ca",
+		"rewards": {
+			"interestPrice": "128140459684597953",
+			"holdersPrice": "133370682528867252",
+			"cumulativeHoldersAmountPerProperty": "3226169058066574161315984000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x75f2e60d3c647216ac03b27e84d87ae913d4d5cc86b4265ea27ef02c4bb31358",
+		"blockNumber": 11003906,
+		"hookedUser": "0xE603eB00619E81d8b4954be13B59D7B6A2DC2B75",
+		"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
+		"rewards": {
+			"interestPrice": "128638205548042815",
+			"holdersPrice": "133888744550003741",
+			"cumulativeHoldersAmountPerProperty": "1643752116840395928257000000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x2c28392a05a1e88fb69f881eed474354a76a5dbd5fadce681ef7cd0cfe858ff4",
+		"blockNumber": 11006484,
+		"hookedUser": "0x693443353EA0Dfc7D44ee5601c0C0Fa5f62b952b",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "129116011660575149",
+			"holdersPrice": "134386052952843516",
+			"cumulativeHoldersAmountPerProperty": "6321520801764249534961551600000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xa9ad58d3412640582dabf163d204fb7435af64008206f10f46f50b84e74c5dc0",
+		"blockNumber": 11007514,
+		"hookedUser": "0xC104738425b8A24f74dA8bd37e8A0BE88b16Dfb5",
+		"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
+		"rewards": {
+			"interestPrice": "129306851165833369",
+			"holdersPrice": "134584681825663296",
+			"cumulativeHoldersAmountPerProperty": "5953707864562974844036545619776000000000"
+		}
+	},
+	{
+		"transactionHash": "0x1918c5db356df3907de311880a52fdb5595f0867f5eaca5e0b86093afa915be5",
+		"blockNumber": 11008641,
+		"hookedUser": "0x4f9E20a2a2cA3438e5Db6D36fA163772eef58483",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "129515312416925988",
+			"holdersPrice": "134801651699249491",
+			"cumulativeHoldersAmountPerProperty": "14034697975868716817353200900000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x9c769dbfbff842b789369d46c72e0656cf12b929bf650c9f722c20cf23ffe113",
+		"blockNumber": 11010692,
+		"hookedUser": "0x3AE5381de8f6CA9e672ed55a3cD802286B45C9B4",
+		"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
+		"rewards": {
+			"interestPrice": "129894318532324002",
+			"holdersPrice": "135196127452010688",
+			"cumulativeHoldersAmountPerProperty": "5981080854326185109879050984128000000000"
+		}
+	},
+	{
+		"transactionHash": "0xd1aeeaa5b50dddb63f9f5036c26cd50e53b584f5a448f0a1929d9d975ab2f93a",
+		"blockNumber": 11014864,
+		"hookedUser": "0xeBE1bbb18335beC74427C74dAC4cFBE685c7DcfF",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "130664661579481640",
+			"holdersPrice": "135997913072521697",
+			"cumulativeHoldersAmountPerProperty": "6399535507087249652487208700000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xb7ae0e751db12f6fc1a40756430159851be92b39580bafdec957e3fc711f3374",
+		"blockNumber": 11016421,
+		"hookedUser": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "130952253092198406",
+			"holdersPrice": "136297243014328943",
+			"cumulativeHoldersAmountPerProperty": "14192790427813985961149055700000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xc933854e255d0427a1fd94f8c22fbc3ace3d18dd0db0db7c28508ee1fadbe9ad",
+		"blockNumber": 11016436,
+		"hookedUser": "0x41A57396bb3e9672f60fDd096F7Bd94a4A9eeb1E",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "130955019341299763",
+			"holdersPrice": "136300122171556885",
+			"cumulativeHoldersAmountPerProperty": "14193096211597765482390029500000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x8ebb728a212bbbe416743c59114c87ee6ba695094966ea30149836d1fe5925d4",
+		"blockNumber": 11017356,
+		"hookedUser": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "131124147559296841",
+			"holdersPrice": "136476153582125272",
+			"cumulativeHoldersAmountPerProperty": "6422631898686769161924391200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x7a23a8b7bd703b99f9247098f73116845d6bd28d2834986475ab89ddee90f643",
+		"blockNumber": 11018362,
+		"hookedUser": "0xA99403A37f8F56Eb4fF7bB51c214C6C3Ab0CB839",
+		"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
+		"rewards": {
+			"interestPrice": "131308887896220911",
+			"holdersPrice": "136668434340964610",
+			"cumulativeHoldersAmountPerProperty": "6047359781534052909697552031410000000000"
+		}
+	},
+	{
+		"transactionHash": "0xfd7f81815dde64037aa5b6f8caee4c1e93df14d5d8ecaa9015bd01be58a54e19",
+		"blockNumber": 11018658,
+		"hookedUser": "0xd8655066Cd6d6757dd227D43BB12d8E0d9d36B7f",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "131363229790632431",
+			"holdersPrice": "136724994271882722",
+			"cumulativeHoldersAmountPerProperty": "6434733920018288738552086200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x1e2dc05f2fe8b0a945f98bc6d4cefe4474461c1c22cb0bba9e93f66f1e46fc6e",
+		"blockNumber": 11021173,
+		"hookedUser": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "131824980547005675",
+			"holdersPrice": "137205591997903852",
+			"cumulativeHoldersAmountPerProperty": "6458097799325259915432629200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x297d6df94f5c9691c0f936fb5b856abe54d71fc52a6578b71325c087324d50a3",
+		"blockNumber": 11021247,
+		"hookedUser": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "131838581389709363",
+			"holdersPrice": "137219747977044424",
+			"cumulativeHoldersAmountPerProperty": "14291685619287403229825431600000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x5790e753bbfe9618061a2050214afe44acdd6a795a85000373cfc399eb17fb68",
+		"blockNumber": 11022177,
+		"hookedUser": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
+		"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
+		"rewards": {
+			"interestPrice": "132009328191828730",
+			"holdersPrice": "137397464036393151",
+			"cumulativeHoldersAmountPerProperty": "1685425178180242950827000000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x0e40c21f8666afb106f2fb84d2ee85746dace494ada03acb0697177a99e92ca7",
+		"blockNumber": 11022255,
+		"hookedUser": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "132023694163025364",
+			"holdersPrice": "137412416373761076",
+			"cumulativeHoldersAmountPerProperty": "14312406162030541988025574400000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xdc3938fd73fa45d84e7d5b9f7b31c2eee24d21aa44f9a4f4dfb546a99409b1b7",
+		"blockNumber": 11022427,
+		"hookedUser": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "132055271756267043",
+			"holdersPrice": "137445282848359558",
+			"cumulativeHoldersAmountPerProperty": "14315974117061305306245854200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x57909f3cd0a2bd913f06722048d5d09efbc3c6cd320d4a33749bf3945b6b7acc",
+		"blockNumber": 11022654,
+		"hookedUser": "0xDEC6C15126A94A507E2c27C6727cedc85bFDf3B7",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "132096870099041624",
+			"holdersPrice": "137488579082675958",
+			"cumulativeHoldersAmountPerProperty": "14320699642424203170957014200000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x14b50ae307a80fec19dbf0e71baaa198ce3f2c3312c64e78d665b9ffdddb5ba1",
+		"blockNumber": 11023736,
+		"hookedUser": "0x5BD8BD127A26448672549D52897438C9c4a73962",
+		"hookedProperty": "0x0f60d5036d0306b0ab20027fb4bfdb10183366ca",
+		"rewards": {
+			"interestPrice": "132294837638630289",
+			"holdersPrice": "137694626930002934",
+			"cumulativeHoldersAmountPerProperty": "3337313852334011090199528000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x8b569343af2fe2777afb14b2ca08181c71d6dafcc1ce716fd04835447ffb9684",
+		"blockNumber": 11027707,
+		"hookedUser": "0x5ea617FeD16185736C42D3f572c536905fC6ef28",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "133020858493040893",
+			"holdersPrice": "138450281288675194",
+			"cumulativeHoldersAmountPerProperty": "14426144544968572744320462600000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xa6712a3236ffc2ecd3d9022496ae677a142b54019880830791453c4cd42d4b2a",
+		"blockNumber": 11030697,
+		"hookedUser": "0xf22B3e9FDfac016Fa197C2326c84657ba4f78f78",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "133567480341953141",
+			"holdersPrice": "139019214233461411",
+			"cumulativeHoldersAmountPerProperty": "14488538867394628591242699900000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x8df439eaa327b1ec89118bb109412ac1d9f8fe892467640db4e8674d905dea96",
+		"blockNumber": 11031134,
+		"hookedUser": "0x1143D16a0276653a3be32B298CEFF28067d5f85D",
+		"hookedProperty": "0x6ac804a994d01f3e8da3e23774632bd48f107fc9",
+		"rewards": {
+			"interestPrice": "133647458231328406",
+			"holdersPrice": "139102456526484644",
+			"cumulativeHoldersAmountPerProperty": "4173073695794539320000000000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x8b78706ca54df4d214423bd8d1f9acd6c4105a0f27fce92efe6c0c09d1e2999c",
+		"blockNumber": 11033419,
+		"hookedUser": "0xDEC6C15126A94A507E2c27C6727cedc85bFDf3B7",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "134065057843757353",
+			"holdersPrice": "139537101021053547",
+			"cumulativeHoldersAmountPerProperty": "14545155818605718261399158300000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x3ef9d1ce9c76d89cee291f6b2583c9972c2fac958e5cad3bcb80e1b59a9d2a84",
+		"blockNumber": 11035399,
+		"hookedUser": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "134426372400029957",
+			"holdersPrice": "139913163110235236",
+			"cumulativeHoldersAmountPerProperty": "14586448198238116275964592400000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x0b04b47610283cc4f83cf43859d3c6e98b1128393342741b46b25a16f4b46048",
+		"blockNumber": 11036150,
+		"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "134563238039424147",
+			"holdersPrice": "140055615102257760",
+			"cumulativeHoldersAmountPerProperty": "14602148833385713996980373942944000000000"
+		}
+	},
+	{
+		"transactionHash": "0xc36ec759585f02a4574420d2082f955b47a1ace1ba96167d141a6e7c216cf137",
+		"blockNumber": 11036363,
+		"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "134602044078378064",
+			"holdersPrice": "140096005061168979",
+			"cumulativeHoldersAmountPerProperty": "6597632811079275250113238900000000000000"
+		}
+	},
+	{
+		"transactionHash": "0xd74f442c2f9747b6c84eb72d7cdfd822bca4495465b974ab9538f1d971cc4399",
+		"blockNumber": 11036550,
+		"hookedUser": "0xFB5C0e6400A95e4191D46196073D30a289abd15c",
+		"hookedProperty": "0x7dc42fa19c5cfdfacdcf7b7beee9b6cfc77a6f1b",
+		"rewards": {
+			"interestPrice": "134636038577631788",
+			"holdersPrice": "140131387091004487",
+			"cumulativeHoldersAmountPerProperty": "0"
+		}
+	},
+	{
+		"transactionHash": "0x8bd97a7ccf49c131a2f38b7a1d501a004c9a21ed26c6ea360f899f816a95ae10",
+		"blockNumber": 11037065,
+		"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"interestPrice": "134716674695213169",
+			"holdersPrice": "140215314478691230",
+			"cumulativeHoldersAmountPerProperty": "6603476003057703779560325000000000000000"
+		}
+	},
+	{
+		"transactionHash": "0x3c7b86d616b8221d2f33b033661533846a411cfa17a6279e81b1be4aa40c0a54",
+		"blockNumber": 11037112,
+		"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"interestPrice": "134724048434067722",
+			"holdersPrice": "140222989186478620",
+			"cumulativeHoldersAmountPerProperty": "14620646519684207007247741735104000000000"
+		}
+	},
+	{
+		"transactionHash": "0x750fffa3a53c70322baa1dfa2cee98b9b9fb9bb09d458d82a67bd9ae1e1651d9",
+		"blockNumber": 11037574,
+		"hookedUser": "0xDaEca4F52C4bE0d6e7DE675C2FEB4C3006A96C84",
+		"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
+		"rewards": {
+			"interestPrice": "134796592855950797",
+			"holdersPrice": "140298494605173248",
+			"cumulativeHoldersAmountPerProperty": "1716979687676864065896000000000000000000"
+		}
+	}
+]

@@ -55,15 +55,25 @@ export const addCumulativeTotalRewardsToLogs = (
 			const [
 				_cumulativeTotalRewards,
 				_totalStaked,
+				_totalStakedLast,
 				_thePropertyStaked,
+				_thePropertyStakedLast,
 			] = await Promise.all([
 				getCumulativeTotalRewards(lockup, blockNumber),
 				getTotalStaked(lockup, blockNumber),
+				getTotalStaked(lockup, blockNumber - 1),
 				getThePropertyStaked(lockup, property, blockNumber),
+				getThePropertyStaked(lockup, property, blockNumber - 1),
 			])
 			return {
 				...log,
-				...{_cumulativeTotalRewards, _totalStaked, _thePropertyStaked},
+				...{
+					_cumulativeTotalRewards,
+					_totalStaked,
+					_totalStakedLast,
+					_thePropertyStaked,
+					_thePropertyStakedLast,
+				},
 			}
 		})
 	)
