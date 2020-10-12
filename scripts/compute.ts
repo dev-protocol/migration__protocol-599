@@ -13,6 +13,7 @@ type Rewards = {
 	hookedUser: string
 	hookedProperty: string
 	rewards: {
+		total: string
 		interestPrice: string
 		holdersPrice: string
 		cumulativeHoldersAmountPerProperty: string
@@ -85,6 +86,7 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 				hookedUser,
 				hookedProperty,
 				rewards: {
+					total: mTotal.toString(),
 					interestPrice: interestPrice.toString(),
 					holdersPrice: holdersPrice.toString(),
 					cumulativeHoldersAmountPerProperty: cumulativeHoldersAmountPerProperty.toString(),

@@ -6,6 +6,7 @@
 			"hookedUser": "0x3Faa7Fb92eE69bcaAcf6d878F48BB9F2476c35F3",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "100843492648228435672861000000000000000000",
 				"interestPrice": "127454650224374906",
 				"holdersPrice": "132656880845777962",
 				"cumulativeHoldersAmountPerProperty": "6238001064296953205587870200000000000000"
@@ -17,6 +18,7 @@
 			"hookedUser": "0xF0Bc763e0A6AF4784a36fa102220FF60eC651f9e",
 			"hookedProperty": "0xcbab4c606dc2eefe5aa716d4892d272040fca053",
 			"rewards": {
+				"total": "100993905658225409349491000000000000000000",
 				"interestPrice": "127644131037241021",
 				"holdersPrice": "132854095569373306",
 				"cumulativeHoldersAmountPerProperty": "26570819113874661200000000000000000000"
@@ -28,6 +30,7 @@
 			"hookedUser": "0x57b70Daf61548118B5be83d61A3A12Cd1211FD3c",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "101369906234688332746609000000000000000000",
 				"interestPrice": "128116094110438340",
 				"holdersPrice": "133345322441476636",
 				"cumulativeHoldersAmountPerProperty": "13881201381960331046629736400000000000000"
@@ -39,6 +42,7 @@
 			"hookedUser": "0x5BD8BD127A26448672549D52897438C9c4a73962",
 			"hookedProperty": "0x0f60d5036d0306b0ab20027fb4bfdb10183366ca",
 			"rewards": {
+				"total": "104731947487408876584723000000000000000000",
 				"interestPrice": "132294837638630289",
 				"holdersPrice": "137694626930002934",
 				"cumulativeHoldersAmountPerProperty": "3337313852334011090199528000000000000000"
@@ -50,6 +54,7 @@
 			"hookedUser": "0xE603eB00619E81d8b4954be13B59D7B6A2DC2B75",
 			"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
 			"rewards": {
+				"total": "101788782837649373978005000000000000000000",
 				"interestPrice": "128638205548042815",
 				"holdersPrice": "133888744550003741",
 				"cumulativeHoldersAmountPerProperty": "1643752116840395928257000000000000000000"
@@ -61,6 +66,7 @@
 			"hookedUser": "0x693443353EA0Dfc7D44ee5601c0C0Fa5f62b952b",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "102171793311540597909972000000000000000000",
 				"interestPrice": "129116011660575149",
 				"holdersPrice": "134386052952843516",
 				"cumulativeHoldersAmountPerProperty": "6321520801764249534961551600000000000000"
@@ -72,6 +78,7 @@
 			"hookedUser": "0xC104738425b8A24f74dA8bd37e8A0BE88b16Dfb5",
 			"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
 			"rewards": {
+				"total": "102324809642779638800242000000000000000000",
 				"interestPrice": "129306851165833369",
 				"holdersPrice": "134584681825663296",
 				"cumulativeHoldersAmountPerProperty": "5953707864562974844036545619776000000000"
@@ -83,6 +90,7 @@
 			"hookedUser": "0x4f9E20a2a2cA3438e5Db6D36fA163772eef58483",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "102492180691661936047663000000000000000000",
 				"interestPrice": "129515312416925988",
 				"holdersPrice": "134801651699249491",
 				"cumulativeHoldersAmountPerProperty": "14034697975868716817353200900000000000000"
@@ -94,6 +102,7 @@
 			"hookedUser": "0x3AE5381de8f6CA9e672ed55a3cD802286B45C9B4",
 			"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
 			"rewards": {
+				"total": "102796716860756174301292000000000000000000",
 				"interestPrice": "129894318532324002",
 				"holdersPrice": "135196127452010688",
 				"cumulativeHoldersAmountPerProperty": "5981080854326185109879050984128000000000"
@@ -105,6 +114,7 @@
 			"hookedUser": "0xeBE1bbb18335beC74427C74dAC4cFBE685c7DcfF",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "103416089253495095250685000000000000000000",
 				"interestPrice": "130664661579481640",
 				"holdersPrice": "135997913072521697",
 				"cumulativeHoldersAmountPerProperty": "6399535507087249652487208700000000000000"
@@ -116,6 +126,7 @@
 			"hookedUser": "0x84942FF5f39e4C32fb3596c06478af36D2E1045D",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "106459917331954567859396000000000000000000",
 				"interestPrice": "134426372400029957",
 				"holdersPrice": "139913163110235236",
 				"cumulativeHoldersAmountPerProperty": "14586448198238116275964592400000000000000"
@@ -127,6 +138,7 @@
 			"hookedUser": "0x41A57396bb3e9672f60fDd096F7Bd94a4A9eeb1E",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "103649483211526797336841000000000000000000",
 				"interestPrice": "130955019341299763",
 				"holdersPrice": "136300122171556885",
 				"cumulativeHoldersAmountPerProperty": "14193096211597765482390029500000000000000"
@@ -138,6 +150,7 @@
 			"hookedUser": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "104351986585491918468053000000000000000000",
 				"interestPrice": "131824980547005675",
 				"holdersPrice": "137205591997903852",
 				"cumulativeHoldersAmountPerProperty": "6458097799325259915432629200000000000000"
@@ -149,6 +162,7 @@
 			"hookedUser": "0xA99403A37f8F56Eb4fF7bB51c214C6C3Ab0CB839",
 			"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
 			"rewards": {
+				"total": "103935136037126622177055000000000000000000",
 				"interestPrice": "131308887896220911",
 				"holdersPrice": "136668434340964610",
 				"cumulativeHoldersAmountPerProperty": "6047359781534052909697552031410000000000"
@@ -160,6 +174,7 @@
 			"hookedUser": "0xd8655066Cd6d6757dd227D43BB12d8E0d9d36B7f",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "103979030174942454456903000000000000000000",
 				"interestPrice": "131363229790632431",
 				"holdersPrice": "136724994271882722",
 				"cumulativeHoldersAmountPerProperty": "6434733920018288738552086200000000000000"
@@ -171,6 +186,7 @@
 			"hookedUser": "0x16378Cc5D9190b650d7ff6685aeD95787ae93eEE",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "104362962583367263612037000000000000000000",
 				"interestPrice": "131838581389709363",
 				"holdersPrice": "137219747977044424",
 				"cumulativeHoldersAmountPerProperty": "14291685619287403229825431600000000000000"
@@ -182,6 +198,7 @@
 			"hookedUser": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
 			"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
 			"rewards": {
+				"total": "104500874895479999249357000000000000000000",
 				"interestPrice": "132009328191828730",
 				"holdersPrice": "137397464036393151",
 				"cumulativeHoldersAmountPerProperty": "1685425178180242950827000000000000000000"
@@ -193,6 +210,7 @@
 			"hookedUser": "0x6990f87dc2BfFbd9A52694b1d3d963F62Cd09eB7",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "104512448982206732250425000000000000000000",
 				"interestPrice": "132023694163025364",
 				"holdersPrice": "137412416373761076",
 				"cumulativeHoldersAmountPerProperty": "14312406162030541988025574400000000000000"
@@ -204,6 +222,7 @@
 			"hookedUser": "0xDEC6C15126A94A507E2c27C6727cedc85bFDf3B7",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "106166652856922342906216000000000000000000",
 				"interestPrice": "134065057843757353",
 				"holdersPrice": "139537101021053547",
 				"cumulativeHoldersAmountPerProperty": "14545155818605718261399158300000000000000"
@@ -215,6 +234,7 @@
 			"hookedUser": "0x5ea617FeD16185736C42D3f572c536905fC6ef28",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "105320328519228994654853000000000000000000",
 				"interestPrice": "133020858493040893",
 				"holdersPrice": "138450281288675194",
 				"cumulativeHoldersAmountPerProperty": "14426144544968572744320462600000000000000"
@@ -226,6 +246,7 @@
 			"hookedUser": "0xf22B3e9FDfac016Fa197C2326c84657ba4f78f78",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "105763349092846863647535000000000000000000",
 				"interestPrice": "133567480341953141",
 				"holdersPrice": "139019214233461411",
 				"cumulativeHoldersAmountPerProperty": "14488538867394628591242699900000000000000"
@@ -237,6 +258,7 @@
 			"hookedUser": "0x1143D16a0276653a3be32B298CEFF28067d5f85D",
 			"hookedProperty": "0x6ac804a994d01f3e8da3e23774632bd48f107fc9",
 			"rewards": {
+				"total": "105828112293358945267861000000000000000000",
 				"interestPrice": "133647458231328406",
 				"holdersPrice": "139102456526484644",
 				"cumulativeHoldersAmountPerProperty": "4173073695794539320000000000000000000000"
@@ -248,6 +270,7 @@
 			"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "106711023906051621245429000000000000000000",
 				"interestPrice": "134724048434067722",
 				"holdersPrice": "140222989186478620",
 				"cumulativeHoldersAmountPerProperty": "14620646519684207007247741735104000000000"
@@ -259,6 +282,7 @@
 			"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "106704275757183889301287000000000000000000",
 				"interestPrice": "134716674695213169",
 				"holdersPrice": "140215314478691230",
 				"cumulativeHoldersAmountPerProperty": "6603476003057703779560325000000000000000"
@@ -270,6 +294,7 @@
 			"hookedUser": "0xFB5C0e6400A95e4191D46196073D30a289abd15c",
 			"hookedProperty": "0x7dc42fa19c5cfdfacdcf7b7beee9b6cfc77a6f1b",
 			"rewards": {
+				"total": "106630365635043124387852000000000000000000",
 				"interestPrice": "134636038577631788",
 				"holdersPrice": "140131387091004487",
 				"cumulativeHoldersAmountPerProperty": "0"
@@ -281,6 +306,7 @@
 			"hookedUser": "0xDaEca4F52C4bE0d6e7DE675C2FEB4C3006A96C84",
 			"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
 			"rewards": {
+				"total": "106777369224726683455306000000000000000000",
 				"interestPrice": "134796592855950797",
 				"holdersPrice": "140298494605173248",
 				"cumulativeHoldersAmountPerProperty": "1716979687676864065896000000000000000000"
@@ -294,6 +320,7 @@
 			"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
 			"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
 			"rewards": {
+				"total": "106704275757183889301287000000000000000000",
 				"interestPrice": "134716674695213169",
 				"holdersPrice": "140215314478691230",
 				"cumulativeHoldersAmountPerProperty": "6603476003057703779560325000000000000000"
@@ -305,6 +332,7 @@
 			"hookedUser": "0xF0Bc763e0A6AF4784a36fa102220FF60eC651f9e",
 			"hookedProperty": "0xcbab4c606dc2eefe5aa716d4892d272040fca053",
 			"rewards": {
+				"total": "100993905658225409349491000000000000000000",
 				"interestPrice": "127644131037241021",
 				"holdersPrice": "132854095569373306",
 				"cumulativeHoldersAmountPerProperty": "26570819113874661200000000000000000000"
@@ -316,6 +344,7 @@
 			"hookedUser": "0x8C88DA15dD4567F2327400f278da36801dc3C7b8",
 			"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
 			"rewards": {
+				"total": "106711023906051621245429000000000000000000",
 				"interestPrice": "134724048434067722",
 				"holdersPrice": "140222989186478620",
 				"cumulativeHoldersAmountPerProperty": "14620646519684207007247741735104000000000"
@@ -327,6 +356,7 @@
 			"hookedUser": "0x5BD8BD127A26448672549D52897438C9c4a73962",
 			"hookedProperty": "0x0f60d5036d0306b0ab20027fb4bfdb10183366ca",
 			"rewards": {
+				"total": "104731947487408876584723000000000000000000",
 				"interestPrice": "132294837638630289",
 				"holdersPrice": "137694626930002934",
 				"cumulativeHoldersAmountPerProperty": "3337313852334011090199528000000000000000"
@@ -338,6 +368,7 @@
 			"hookedUser": "0xDaEca4F52C4bE0d6e7DE675C2FEB4C3006A96C84",
 			"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
 			"rewards": {
+				"total": "106777369224726683455306000000000000000000",
 				"interestPrice": "134796592855950797",
 				"holdersPrice": "140298494605173248",
 				"cumulativeHoldersAmountPerProperty": "1716979687676864065896000000000000000000"
@@ -349,6 +380,7 @@
 			"hookedUser": "0xA99403A37f8F56Eb4fF7bB51c214C6C3Ab0CB839",
 			"hookedProperty": "0xf6899a1536e6474f0a6aa2b36714e9632fb97d40",
 			"rewards": {
+				"total": "103935136037126622177055000000000000000000",
 				"interestPrice": "131308887896220911",
 				"holdersPrice": "136668434340964610",
 				"cumulativeHoldersAmountPerProperty": "6047359781534052909697552031410000000000"
@@ -360,6 +392,7 @@
 			"hookedUser": "0x1143D16a0276653a3be32B298CEFF28067d5f85D",
 			"hookedProperty": "0x6ac804a994d01f3e8da3e23774632bd48f107fc9",
 			"rewards": {
+				"total": "105828112293358945267861000000000000000000",
 				"interestPrice": "133647458231328406",
 				"holdersPrice": "139102456526484644",
 				"cumulativeHoldersAmountPerProperty": "4173073695794539320000000000000000000000"
@@ -371,6 +404,7 @@
 			"hookedUser": "0xFB5C0e6400A95e4191D46196073D30a289abd15c",
 			"hookedProperty": "0x7dc42fa19c5cfdfacdcf7b7beee9b6cfc77a6f1b",
 			"rewards": {
+				"total": "106630365635043124387852000000000000000000",
 				"interestPrice": "134636038577631788",
 				"holdersPrice": "140131387091004487",
 				"cumulativeHoldersAmountPerProperty": "0"
@@ -383,6 +417,7 @@
 		"hookedUser": "0xDaEca4F52C4bE0d6e7DE675C2FEB4C3006A96C84",
 		"hookedProperty": "0xcebd1bf31df3e3697ea26e2f94f9e3644c809f46",
 		"rewards": {
+			"total": "106777369224726683455306000000000000000000",
 			"interestPrice": "134796592855950797",
 			"holdersPrice": "140298494605173248",
 			"cumulativeHoldersAmountPerProperty": "1716979687676864065896000000000000000000"
