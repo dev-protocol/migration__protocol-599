@@ -39,8 +39,8 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 	}
 > = new Map()
 
-;(async () => {
-	const records = sortByBlockNumber(stakingRecords).map(
+export const compute = (records: typeof stakingRecords): Rewards[] =>
+	sortByBlockNumber(records).map(
 		(record): Rewards => {
 			const action = record._action
 			const transactionHash = record.transactionHash
@@ -105,9 +105,9 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 			}
 		}
 	)
-
+;(async () => {
 	await promisify(writeFile)(
 		join(__dirname, '..', 'data', 'computed.json'),
-		JSON.stringify(records)
+		JSON.stringify(compute(stakingRecords))
 	)
 })().catch(console.error)

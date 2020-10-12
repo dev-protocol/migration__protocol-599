@@ -49,24 +49,34 @@ const shouldinitLastWithdraw = (data: typeof computed) =>
 		['withdraw']
 	)
 
+export const dry = (
+	records: typeof computed
+): {
+	__initStakeOnProperty: typeof computed
+	__initLastStakeOnProperty: typeof computed
+	__initLastStake: typeof computed
+	__initLastWithdraw: typeof computed
+} =>
+	((sortedRecords) =>
+		(([
+			__initStakeOnProperty,
+			__initLastStakeOnProperty,
+			__initLastStake,
+			__initLastWithdraw,
+		]) => ({
+			__initStakeOnProperty,
+			__initLastStakeOnProperty,
+			__initLastStake,
+			__initLastWithdraw,
+		}))([
+			shouldInitStakeOnProperty(sortedRecords),
+			shouldInitLastStakeOnProperty(sortedRecords),
+			shouldInitLastStake(sortedRecords),
+			shouldinitLastWithdraw(sortedRecords),
+		]))(sortByBlockNumber(records))
 ;(async () => {
-	const computedRecords = sortByBlockNumber(computed)
-	const __initStakeOnProperty = shouldInitStakeOnProperty(computedRecords)
-	const __initLastStakeOnProperty = shouldInitLastStakeOnProperty(
-		computedRecords
-	)
-	const __initLastStake = shouldInitLastStake(computedRecords)
-	const __initLastWithdraw = shouldinitLastWithdraw(computedRecords)
-
-	const records = {
-		__initStakeOnProperty,
-		__initLastStakeOnProperty,
-		__initLastStake,
-		__initLastWithdraw,
-	}
-
 	await promisify(writeFile)(
 		join(__dirname, '..', 'data', 'dry.json'),
-		JSON.stringify(records)
+		JSON.stringify(dry(computed))
 	)
 })().catch(console.error)
