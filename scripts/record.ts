@@ -1,5 +1,4 @@
 import {createWallet} from './lib/client'
-import {createDev} from './lib/dev'
 import {config} from 'dotenv'
 import {createLockup} from './lib/lockup'
 import {createPropertyGroup} from './lib/property-group'
@@ -15,24 +14,22 @@ import {join} from 'path'
 import {addTransactionToLogs} from './lib/transaction'
 import {addCumulativeTotalRewardsToLogs} from './lib/transaction-rewards'
 import {createAddressConfig, createGetLockup} from './lib/address-config'
+import {devTransfers} from './lib/record-dev-transfers'
+import {propertyTransfers} from './lib/record-property-transfers'
 config()
 
 const {
 	INFURA: infura,
 	MNEMONIC: mnemonic,
 	CONFIG: configAddress = '0x1d415aa39d647834786eb9b5a333a50e9935b796',
-	DEV: devAddress = '0x5cAf454Ba92e6F2c929DF14667Ee360eD9fD5b26',
 	PROPERTY_GROUP: propertyGroupAddress = '0x7ba9c52453d2520e1484f99ae5b2e800cd781aa5',
-	FROM_BLOCK: fromBlock = '10358615',
 } = process.env
 
 ;(async () => {
-	console.log(infura, mnemonic)
 	if (!infura || !mnemonic) return
 
 	const [wallet, provider] = createWallet(infura, mnemonic)
 	const address = createAddressConfig(wallet)(configAddress)
-	const dev = createDev(wallet)(devAddress)
 	const lockupFactory = createLockup(wallet)
 	const propertyGroup = createPropertyGroup(wallet)(propertyGroupAddress)
 	const addTransaction = addTransactionToLogs(provider)
@@ -41,13 +38,21 @@ const {
 		lockupFactory
 	)
 
-	const event = dev.filters.Transfer()
-	const eventsTransfer = await provider.getLogs({
-		...event,
-		...{fromBlock: Number(fromBlock)},
-	})
+	const devTransferLogs = await devTransfers(infura, mnemonic)
+	const propertyTransferLogs = await propertyTransfers(infura, mnemonic)
+	console.log(
+		'devTransferLogs',
+		devTransferLogs.length,
+		'propertyTransferLogs',
+		propertyTransferLogs.length
+	)
+	if (propertyTransferLogs.length > 0) {
+		throw new Error('Not implemented yet')
+	}
 
-	const logWithTx = await addTransaction(eventsTransfer)
+	const allLogs = [...devTransferLogs, ...propertyTransferLogs]
+
+	const logWithTx = await addTransaction(allLogs)
 	const listStake = await onlyStake(logWithTx, propertyGroup)
 	const listUnstake = await onlyUnstake(logWithTx, propertyGroup)
 	const listWithdraw = await onlyPropertyWithdraw(logWithTx)
