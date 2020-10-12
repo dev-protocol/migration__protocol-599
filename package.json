@@ -5,7 +5,6 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "mocha --require ts-node/register 'test/**/*.ts' --timeout 300000 --parallel",
-		"pretest": "yarn build",
 		"build": "waffle waffle-config.json",
 		"prebuild": "yarn clean",
 		"exec": "ts-node",
