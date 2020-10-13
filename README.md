@@ -1,11 +1,20 @@
-# template-repos-ts-sol
+## How to use this repos
 
-Template repository for using TypeScript and Solidity
-
-# Usage
-
-Create a repository using this template; just runs following command.
+Update `data/staking.json` with the following command:
 
 ```bash
-yarn
+npx ts-node scripts/record.ts
+```
+
+The following command extracts the transactions that need to be executed:
+
+```bash
+npx ts-node scripts/computed.ts
+npx ts-node scripts/dry.ts
+```
+
+Execute the transaction with the following command:
+
+```bash
+npx ts-node scripts/write.ts
 ```
