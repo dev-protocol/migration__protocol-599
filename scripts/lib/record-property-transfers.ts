@@ -3,7 +3,7 @@ import {createWallet} from './client'
 import {createToken} from './token'
 import {config} from 'dotenv'
 import bent from 'bent'
-import {queue} from './queue'
+import {queueAll} from './queue'
 config()
 
 type GraphQLPropertyFactoryCreateResponse = {
@@ -65,7 +65,7 @@ export const propertyTransfers = async (
 	const allEventFilters = allProperties.map(({property}) =>
 		propertyInterfaceFactory(property).filters.Transfer()
 	)
-	const allEventLogs = await queue('allPropertyTransfers').addAll(
+	const allEventLogs = await queueAll('allPropertyTransfers')(
 		allEventFilters.map((filter) => async () => provider.getLogs(filter))
 	)
 

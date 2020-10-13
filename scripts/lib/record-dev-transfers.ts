@@ -3,7 +3,7 @@ import {createWallet} from './client'
 import {createToken} from './token'
 import {config} from 'dotenv'
 import {arrayBetween} from './collection'
-import {queue} from './queue'
+import {queueAll} from './queue'
 config()
 
 const {
@@ -38,7 +38,7 @@ export const devTransfers = async (
 		})
 	)
 
-	const eventsTransfer = await queue('devTransfers').addAll(getLogsTasks)
+	const eventsTransfer = await queueAll('devTransfers')(getLogsTasks)
 
 	return eventsTransfer.flat()
 }

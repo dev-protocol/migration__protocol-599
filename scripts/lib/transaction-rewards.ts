@@ -1,5 +1,5 @@
 import {Contract} from 'ethers'
-import {queue} from './queue'
+import {queueAll} from './queue'
 import {
 	createGetAllValue,
 	createGetDifference,
@@ -46,7 +46,7 @@ export const addCumulativeTotalRewardsToLogs = (
 		}
 	>
 > =>
-	queue('addCumulativeTotalRewardsToLogs').addAll(
+	queueAll('addCumulativeTotalRewardsToLogs')(
 		logs.map((log) => async () => {
 			const {blockNumber} = log
 			const address = await addressFecther(blockNumber)

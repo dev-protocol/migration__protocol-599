@@ -1,10 +1,9 @@
 import {Contract} from 'ethers'
 import {Log} from '@ethersproject/abstract-provider'
-import {queue} from './queue'
+import {queueAll} from './queue'
 import {IterableElement, PromiseValue} from 'type-fest'
 import {addTransactionToLogs} from './transaction'
 import {WITHDRAW} from './constants'
-import pRetry from 'p-retry'
 
 export type IsPropertyResponse = {
 	_property?: string
@@ -36,21 +35,17 @@ const isProperty = (
 	propertyGroup: Contract
 ) => <T extends Log>({transactionHash, topics}: T) => async (): Promise<
 	IsPropertyResponse
-> =>
-	pRetry(
-		async () => {
-			const property = address(topics)
-			const yes = await propertyGroup.functions
-				.isGroup(property)
-				.then(([y]: [boolean]) => y)
-			return {
-				_property: property,
-				transactionHash,
-				yes,
-			}
-		},
-		{retries: 5}
-	)
+> => {
+	const property = address(topics)
+	const yes = await propertyGroup.functions
+		.isGroup(property)
+		.then(([y]: [boolean]) => y)
+	return {
+		_property: property,
+		transactionHash,
+		yes,
+	}
+}
 
 const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async <
 	T extends Log
@@ -59,7 +54,7 @@ const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async <
 ): Promise<ReadonlyArray<LogWithProperty<T>>> => {
 	const find = (a: IsPropertyResponse[], b: Log) =>
 		a.find((x) => x.transactionHash === b.transactionHash)
-	const res = await queue('onlyProperty').addAll(logs.map(filterFn))
+	const res = await queueAll('onlyProperty')(logs.map(filterFn))
 	return logs
 		.filter((log) => find(res, log)?.yes)
 		.map((log) => ({
