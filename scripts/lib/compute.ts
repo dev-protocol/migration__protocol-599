@@ -1,4 +1,4 @@
-import stakingRecords from '../../data/staking.json'
+import transactions from '../../data/transactions.json'
 import {BigNumber} from 'ethers'
 import {toBigNumber} from './number'
 import {BASIS, HOLDERS_SHARE} from './constants'
@@ -36,7 +36,7 @@ const lastCumulativeHoldersRewardsPerProperty: Map<
 	}
 > = new Map()
 
-export const compute = (records: typeof stakingRecords): Rewards[] =>
+export const compute = (records: typeof transactions): Rewards[] =>
 	sortByBlockNumber(records).map(
 		(record): Rewards => {
 			const action = record._action

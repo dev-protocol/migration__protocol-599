@@ -1,10 +1,10 @@
 import {compute} from '../scripts/lib/compute'
-import stakingRecords from '../data/staking.json'
+import transactions from '../data/transactions.json'
 import {expect} from 'chai'
 
 describe('scripts/lib/compute', () => {
 	it('Returns calculation result by the expected way', () => {
-		const dummy: typeof stakingRecords = ([
+		const dummy: typeof transactions = ([
 			{
 				transactionHash: '0x01',
 				blockNumber: 1,
@@ -75,7 +75,7 @@ describe('scripts/lib/compute', () => {
 				_thePropertyStakedLast: '4',
 				_cumulativeTotalRewards: '500',
 			},
-		] as unknown) as typeof stakingRecords
+		] as unknown) as typeof transactions
 		const result = compute(dummy)
 		const expected: ReturnType<typeof compute> = [
 			{

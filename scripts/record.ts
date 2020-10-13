@@ -65,7 +65,7 @@ const {
 	const sorted = sortByBlockNumber(records)
 
 	await promisify(writeFile)(
-		join(__dirname, '..', 'data', 'staking.json'),
+		join(__dirname, '..', 'data', 'transactions.json'),
 		JSON.stringify(sorted)
 	)
 })().catch(console.error)

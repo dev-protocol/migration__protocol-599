@@ -1,6 +1,6 @@
 ## How to use this repos
 
-Update `data/staking.json` with the following command:
+Update `data/transactions.json` with the following command:
 
 ```bash
 npx ts-node scripts/record.ts
