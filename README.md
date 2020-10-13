@@ -9,7 +9,7 @@ npx ts-node scripts/record.ts
 The following command extracts the transactions that need to be executed:
 
 ```bash
-npx ts-node scripts/computed.ts
+npx ts-node scripts/compute.ts
 npx ts-node scripts/dry.ts
 ```
 
