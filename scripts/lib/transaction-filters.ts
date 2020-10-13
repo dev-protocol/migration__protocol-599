@@ -3,7 +3,7 @@ import {Log} from '@ethersproject/abstract-provider'
 import {queueAll} from './queue'
 import {IterableElement, PromiseValue} from 'type-fest'
 import {addTransactionToLogs} from './transaction'
-import {WITHDRAW} from './constants'
+import {ZERO_ADDRESS, WITHDRAW} from './constants'
 
 export type IsPropertyResponse = {
 	_property?: string
@@ -82,11 +82,13 @@ export const onlyPropertyWithdraw = async <T extends LogWithTransaction>(
 ): Promise<ReadonlyArray<LogWithProperty<T>>> =>
 	onlyProperty((el) => async (): Promise<IsPropertyResponse> => {
 		const {
+			topics,
 			transactionHash,
 			_transaction,
 		} = (el as unknown) as LogWithTransaction
 		const {data} = _transaction
-		const yes = data.startsWith(WITHDRAW)
+		const sender = getSenderAddress(topics)
+		const yes = sender === ZERO_ADDRESS && data.startsWith(WITHDRAW)
 		const property = `0x${data.slice(-40)}`
 		return {
 			_property: property,
