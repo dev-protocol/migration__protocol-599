@@ -31,7 +31,6 @@ contract IMigrateLockup is ILegacyLockup {
 	function __initStakeOnProperty(
 		address _property,
 		address _user,
-		uint256 _cReward,
 		uint256 _cInterestPrice
 	) public;
 
