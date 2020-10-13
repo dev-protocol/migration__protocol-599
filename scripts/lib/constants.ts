@@ -1,8 +1,3 @@
-export const DEV_DEPOSIT = {
-	id: '0x47e7ef24',
-	fragment: `deposit(address _to, uint256 _amount) external returns (bool)`,
-}
-
 export const WITHDRAW = '0x51cff8d9'
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
