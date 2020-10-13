@@ -2,6 +2,8 @@ import {Log} from '@ethersproject/abstract-provider'
 import {createWallet} from './client'
 import {createToken} from './token'
 import {config} from 'dotenv'
+import {arrayBetween} from './collection'
+import {queue} from './queue'
 config()
 
 const {
@@ -17,10 +19,26 @@ export const devTransfers = async (
 	const dev = createToken(wallet)(devAddress)
 
 	const event = dev.filters.Transfer()
-	const eventsTransfer = await provider.getLogs({
-		...event,
-		...{fromBlock: Number(fromBlock)},
-	})
+	const currentBlockNumber = await provider.getBlockNumber()
+	const fromBlockNumber = Number(fromBlock)
+	const blocksBase = arrayBetween(fromBlockNumber, currentBlockNumber, 1000)
+	const blocks = blocksBase.map((x, i) => ({
+		...{
+			fromBlock: x,
+		},
+		...((to) => (to ? {toBlock: to - 1} : {}))(blocksBase[i + 1]),
+	}))
+	const getLogsTasks = blocks.map(({fromBlock, toBlock}) => async () =>
+		provider.getLogs({
+			...event,
+			...{
+				fromBlock,
+				toBlock,
+			},
+		})
+	)
 
-	return eventsTransfer
+	const eventsTransfer = await queue('devTransfers').addAll(getLogsTasks)
+
+	return eventsTransfer.flat()
 }

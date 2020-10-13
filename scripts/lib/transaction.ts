@@ -3,6 +3,7 @@ import {Log} from '@ethersproject/abstract-provider'
 import {Except} from 'type-fest'
 import {TransactionResponse} from '@ethersproject/abstract-provider'
 import {queue} from './queue'
+import pRetry from 'p-retry'
 
 export const addTransactionToLogs = (
 	provider: ethers.providers.BaseProvider
@@ -13,8 +14,12 @@ export const addTransactionToLogs = (
 > =>
 	queue('addTransactionToLogs').addAll(
 		logs.map((log) => async () =>
-			provider
-				.getTransaction(log.transactionHash)
-				.then(({confirmations, ...x}) => ({...log, _transaction: x}))
+			pRetry(
+				async () =>
+					provider
+						.getTransaction(log.transactionHash)
+						.then(({confirmations, ...x}) => ({...log, _transaction: x})),
+				{retries: 5}
+			)
 		)
 	)

@@ -4,6 +4,7 @@ import {queue} from './queue'
 import {IterableElement, PromiseValue} from 'type-fest'
 import {addTransactionToLogs} from './transaction'
 import {WITHDRAW} from './constants'
+import pRetry from 'p-retry'
 
 export type IsPropertyResponse = {
 	_property?: string
@@ -35,17 +36,21 @@ const isProperty = (
 	propertyGroup: Contract
 ) => <T extends Log>({transactionHash, topics}: T) => async (): Promise<
 	IsPropertyResponse
-> => {
-	const property = address(topics)
-	const yes = await propertyGroup.functions
-		.isGroup(property)
-		.then(([y]: [boolean]) => y)
-	return {
-		_property: property,
-		transactionHash,
-		yes,
-	}
-}
+> =>
+	pRetry(
+		async () => {
+			const property = address(topics)
+			const yes = await propertyGroup.functions
+				.isGroup(property)
+				.then(([y]: [boolean]) => y)
+			return {
+				_property: property,
+				transactionHash,
+				yes,
+			}
+		},
+		{retries: 5}
+	)
 
 const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async <
 	T extends Log
