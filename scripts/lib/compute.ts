@@ -1,7 +1,7 @@
 import transactions from '../../data/transactions.json'
 import {BigNumber} from 'ethers'
 import {toBigNumber} from './number'
-import {BASIS, HOLDERS_SHARE} from './constants'
+import {ACTIONS, BASIS, HOLDERS_SHARE} from './constants'
 import {sortByBlockNumber} from './collection'
 
 type Rewards = {
@@ -73,7 +73,7 @@ export const compute = (records: typeof transactions): Rewards[] =>
 				.add(lastCHoldersPProperty?.amount ?? zero)
 
 			// Store computed latest values
-			if (action === 'stake' || action === 'unstake') {
+			if (action === ACTIONS.STAKE || action === ACTIONS.UNSTAKE) {
 				storage.set('LastCumulativeReward', mTotal)
 				storage.set('LastCumulativeHoldersRewardPrice', holdersPrice)
 				storage.set('LastCumulativeInterestPrice', interestPrice)

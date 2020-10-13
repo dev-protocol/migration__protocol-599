@@ -16,6 +16,7 @@ import {addCumulativeTotalRewardsToLogs} from './lib/transaction-rewards'
 import {createAddressConfig, createGetLockup} from './lib/address-config'
 import {devTransfers} from './lib/record-dev-transfers'
 import {propertyTransfers} from './lib/record-property-transfers'
+import {ACTIONS} from './lib/constants'
 config()
 
 const {
@@ -57,9 +58,9 @@ const {
 	const listUnstake = await onlyUnstake(logWithTx, propertyGroup)
 	const listWithdraw = await onlyPropertyWithdraw(logWithTx)
 	const logs = [
-		...listStake.map(add({_action: 'stake'})),
-		...listUnstake.map(add({_action: 'unstake'})),
-		...listWithdraw.map(add({_action: 'withdraw'})),
+		...listStake.map(add({_action: ACTIONS.STAKE})),
+		...listUnstake.map(add({_action: ACTIONS.UNSTAKE})),
+		...listWithdraw.map(add({_action: ACTIONS.WITHDRAW})),
 	]
 	const records = await addCumulativeTotalRewards(logs)
 	const sorted = sortByBlockNumber(records)

@@ -1,6 +1,7 @@
 import computed from '../../data/computed.json'
 import {sortByBlockNumber} from './collection'
 import {IterableElement} from 'type-fest'
+import {ACTIONS} from './constants'
 
 const findLastTransactions = (
 	data: typeof computed,
@@ -30,20 +31,26 @@ const shouldInitStakeOnProperty = (data: typeof computed) =>
 	findLastTransactions(
 		data,
 		(x) => `stake-or-unstake-${x.hookedProperty}${x.hookedUser}`,
-		['stake', 'unstake']
+		[ACTIONS.STAKE, ACTIONS.UNSTAKE]
 	)
 
 const shouldInitLastStakeOnProperty = (data: typeof computed) =>
-	findLastTransactions(data, (x) => x.hookedProperty, ['stake', 'unstake'])
+	findLastTransactions(data, (x) => x.hookedProperty, [
+		ACTIONS.STAKE,
+		ACTIONS.UNSTAKE,
+	])
 
 const shouldInitLastStake = (data: typeof computed) =>
-	findLastTransactions(data, () => 'stake-or-unstake', ['stake', 'unstake'])
+	findLastTransactions(data, () => 'stake-or-unstake', [
+		ACTIONS.STAKE,
+		ACTIONS.UNSTAKE,
+	])
 
 const shouldinitLastWithdraw = (data: typeof computed) =>
 	findLastTransactions(
 		data,
 		(x) => `withdraw-${x.hookedProperty}${x.hookedUser}`,
-		['withdraw']
+		[ACTIONS.WITHDRAW]
 	)
 
 export const dry = (

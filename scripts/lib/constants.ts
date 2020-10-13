@@ -7,3 +7,9 @@ export const BASIS = '1000000000000000000'
 export const HOLDERS_SHARE = 51
 
 export const GAS_LIMIT = 6721975
+
+export const ACTIONS = {
+	STAKE: 'stake',
+	UNSTAKE: 'unstake',
+	WITHDRAW: 'withdraw',
+}
