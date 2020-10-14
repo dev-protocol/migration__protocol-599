@@ -52,15 +52,18 @@ const onlyProperty = (filterFn: ReturnType<typeof isProperty>) => async <
 >(
 	logs: readonly T[]
 ): Promise<ReadonlyArray<LogWithProperty<T>>> => {
-	const find = (a: IsPropertyResponse[], b: Log) =>
-		a.find((x) => x.transactionHash === b.transactionHash)
 	const res = await queueAll('onlyProperty')(logs.map(filterFn))
+	const hashMap: Map<string, IsPropertyResponse> = new Map<
+		string,
+		IsPropertyResponse
+	>(res.map((log) => [log.transactionHash, log]))
 	return logs
-		.filter((log) => find(res, log)?.yes)
+		.filter(({transactionHash}) => hashMap.get(transactionHash)?.yes)
 		.map((log) => ({
 			...log,
 			...{
-				_property: (find(res, log) as OnlyPropertyResponse)._property,
+				_property: (hashMap.get(log.transactionHash) as OnlyPropertyResponse)
+					._property,
 			},
 		}))
 }
