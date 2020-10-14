@@ -5,6 +5,11 @@ import {IterableElement, PromiseValue} from 'type-fest'
 import {addTransactionToLogs} from './transaction'
 import {ZERO_ADDRESS, WITHDRAW} from './constants'
 
+const addressIsPropertyMap: Map<string | undefined, boolean> = new Map<
+	string | undefined,
+	boolean
+>()
+
 export type IsPropertyResponse = {
 	_property?: string
 	transactionHash: string
@@ -37,9 +42,16 @@ const isProperty = (
 	IsPropertyResponse
 > => {
 	const property = address(topics)
-	const yes = await propertyGroup.functions
-		.isGroup(property)
-		.then(([y]: [boolean]) => y)
+	const storedAnswer = addressIsPropertyMap.get(property)
+	const yes =
+		typeof storedAnswer === 'boolean'
+			? storedAnswer
+			: await propertyGroup.functions
+					.isGroup(property)
+					.then(([y]: [boolean]) => {
+						addressIsPropertyMap.set(property, y)
+						return y
+					})
 	return {
 		_property: property,
 		transactionHash,
