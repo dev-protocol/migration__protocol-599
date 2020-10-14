@@ -1,5 +1,5 @@
-import {Wallet, Contract, BigNumber} from 'ethers'
-import {TransactionResponse} from '@ethersproject/abstract-provider'
+import {Wallet, Contract, BigNumber, ethers} from 'ethers'
+import {TransactionReceipt} from '@ethersproject/abstract-provider'
 import * as ILockup from '../../build/IMigrateLockup.json'
 import {send} from './send'
 
@@ -33,14 +33,15 @@ export const createGetPropertyValue = (contract: Contract) => (
 	contract.functions.getPropertyValue(property, {blockTag: blockNumber})
 
 export const createInitStakeOnPropertySender = (
+	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
 	property: string
 	user: string
 	cInterestPrice: string
-}) => Promise<TransactionResponse | Error>) => {
-	const sender = send(contract, gasPriceFetcher)
+}) => Promise<TransactionReceipt | Error>) => {
+	const sender = send(provider, contract, gasPriceFetcher)
 	return async ({
 		property,
 		user,
@@ -49,19 +50,20 @@ export const createInitStakeOnPropertySender = (
 		property: string
 		user: string
 		cInterestPrice: string
-	}): Promise<TransactionResponse | Error> =>
+	}): Promise<TransactionReceipt | Error> =>
 		sender('__initStakeOnProperty', [property, user, cInterestPrice])
 }
 
 export const createInitLastStakeOnPropertySender = (
+	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
 	property: string
 	cHoldersAmountPerProperty: string
 	cHoldersPrice: string
-}) => Promise<TransactionResponse | Error>) => {
-	const sender = send(contract, gasPriceFetcher)
+}) => Promise<TransactionReceipt | Error>) => {
+	const sender = send(provider, contract, gasPriceFetcher)
 	return async ({
 		property,
 		cHoldersAmountPerProperty,
@@ -70,7 +72,7 @@ export const createInitLastStakeOnPropertySender = (
 		property: string
 		cHoldersAmountPerProperty: string
 		cHoldersPrice: string
-	}): Promise<TransactionResponse | Error> =>
+	}): Promise<TransactionReceipt | Error> =>
 		sender('__initLastStakeOnProperty', [
 			property,
 			cHoldersAmountPerProperty,
@@ -79,14 +81,15 @@ export const createInitLastStakeOnPropertySender = (
 }
 
 export const createInitLastStakeSender = (
+	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
 	cReward: string
 	cInterestPrice: string
 	cHoldersPrice: string
-}) => Promise<TransactionResponse | Error>) => {
-	const sender = send(contract, gasPriceFetcher)
+}) => Promise<TransactionReceipt | Error>) => {
+	const sender = send(provider, contract, gasPriceFetcher)
 	return async ({
 		cReward,
 		cInterestPrice,
@@ -95,6 +98,6 @@ export const createInitLastStakeSender = (
 		cReward: string
 		cInterestPrice: string
 		cHoldersPrice: string
-	}): Promise<TransactionResponse | Error> =>
+	}): Promise<TransactionReceipt | Error> =>
 		sender('__initLastStake', [cReward, cInterestPrice, cHoldersPrice])
 }

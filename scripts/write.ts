@@ -23,26 +23,33 @@ const {
 ;(async () => {
 	if (!infura || !mnemonic || !egsToken) return
 
-	const [wallet] = createWallet(infura, mnemonic)
+	const [wallet, provider] = createWallet(infura, mnemonic)
 	const lockup = createLockup(wallet)(migrateLockupAddress)
 	const withdraw = createWithdraw(wallet)(migrateWithdrawAddress)
 	const gasPriceFetcher = ethgas(egsToken)('fastest')
 	const initStakeOnProperty = createInitStakeOnPropertySender(
+		provider,
 		lockup,
 		gasPriceFetcher
 	)
 	const initLastStakeOnProperty = createInitLastStakeOnPropertySender(
+		provider,
 		lockup,
 		gasPriceFetcher
 	)
-	const initLastStake = createInitLastStakeSender(lockup, gasPriceFetcher)
+	const initLastStake = createInitLastStakeSender(
+		provider,
+		lockup,
+		gasPriceFetcher
+	)
 	const initLastWithdraw = createInitLastWithdrawSender(
+		provider,
 		withdraw,
 		gasPriceFetcher
 	)
 
 	let count = 0
-	const queue = new Queue({concurrency: 2}).on('active', () => {
+	const queue = new Queue({concurrency: 4}).on('active', () => {
 		console.log(
 			`Working on item #${++count}.  Size: ${queue.size}  Pending: ${
 				queue.pending
