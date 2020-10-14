@@ -1,8 +1,7 @@
 import {Wallet, Contract, BigNumber} from 'ethers'
 import {TransactionResponse} from '@ethersproject/abstract-provider'
 import * as IWithdraw from '../../build/IMigrateWithdraw.json'
-import {GAS_LIMIT} from './constants'
-import {txError} from './log'
+import {send} from './send'
 
 export const createWithdraw = (wallet: Wallet) => (address: string): Contract =>
 	new Contract(address, IWithdraw.abi, wallet)
@@ -10,18 +9,20 @@ export const createWithdraw = (wallet: Wallet) => (address: string): Contract =>
 export const createInitLastWithdrawSender = (
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
-) => async ({
-	property,
-	user,
-	cHoldersPrice,
-}: {
+): ((args: {
 	property: string
 	user: string
 	cHoldersPrice: string
-}): Promise<TransactionResponse> =>
-	contract
-		.__initLastWithdraw(property, user, cHoldersPrice, {
-			gasLimit: GAS_LIMIT,
-			gasPrice: await gasPriceFetcher(),
-		})
-		.catch(txError('__initLastWithdraw', property, user, cHoldersPrice))
+}) => Promise<TransactionResponse | Error>) => {
+	const sender = send(contract, gasPriceFetcher)
+	return async ({
+		property,
+		user,
+		cHoldersPrice,
+	}: {
+		property: string
+		user: string
+		cHoldersPrice: string
+	}): Promise<TransactionResponse | Error> =>
+		sender('__initLastWithdraw', [property, user, cHoldersPrice])
+}

@@ -16,19 +16,12 @@ const {
 	INFURA: infura,
 	MNEMONIC: mnemonic,
 	EGS_TOKEN: egsToken,
-	MIGRATE_LOCKUP: migrateLockupAddress,
-	MIGRATE_WITHDRAW: migrateWithdrawAddress,
+	MIGRATE_LOCKUP: migrateLockupAddress = '0xe43d4734f7dc7184e6d4afE0EC54C73b0ED922C6',
+	MIGRATE_WITHDRAW: migrateWithdrawAddress = '0x09E989a431321fa953bF9167c215B50E3A90937f',
 } = process.env
 
 ;(async () => {
-	if (
-		!infura ||
-		!mnemonic ||
-		!egsToken ||
-		!migrateLockupAddress ||
-		!migrateWithdrawAddress
-	)
-		return
+	if (!infura || !mnemonic || !egsToken) return
 
 	const [wallet] = createWallet(infura, mnemonic)
 	const lockup = createLockup(wallet)(migrateLockupAddress)

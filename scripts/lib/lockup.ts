@@ -1,8 +1,7 @@
 import {Wallet, Contract, BigNumber} from 'ethers'
 import {TransactionResponse} from '@ethersproject/abstract-provider'
 import * as ILockup from '../../build/IMigrateLockup.json'
-import {GAS_LIMIT} from './constants'
-import {txError} from './log'
+import {send} from './send'
 
 export const createLockup = (wallet: Wallet) => (address: string): Contract =>
 	new Contract(address, ILockup.abi, wallet)
@@ -36,68 +35,66 @@ export const createGetPropertyValue = (contract: Contract) => (
 export const createInitStakeOnPropertySender = (
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
-) => async ({
-	property,
-	user,
-	cInterestPrice,
-}: {
+): ((args: {
 	property: string
 	user: string
 	cInterestPrice: string
-}): Promise<TransactionResponse> =>
-	contract
-		.__initStakeOnProperty(property, user, cInterestPrice, {
-			gasLimit: GAS_LIMIT,
-			gasPrice: await gasPriceFetcher(),
-		})
-		.catch(txError('__initStakeOnProperty', property, user, cInterestPrice))
+}) => Promise<TransactionResponse | Error>) => {
+	const sender = send(contract, gasPriceFetcher)
+	return async ({
+		property,
+		user,
+		cInterestPrice,
+	}: {
+		property: string
+		user: string
+		cInterestPrice: string
+	}): Promise<TransactionResponse | Error> =>
+		sender('__initStakeOnProperty', [property, user, cInterestPrice])
+}
 
 export const createInitLastStakeOnPropertySender = (
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
-) => async ({
-	property,
-	cHoldersAmountPerProperty,
-	cHoldersPrice,
-}: {
+): ((args: {
 	property: string
 	cHoldersAmountPerProperty: string
 	cHoldersPrice: string
-}): Promise<TransactionResponse> =>
-	contract
-		.__initLastStakeOnProperty(
+}) => Promise<TransactionResponse | Error>) => {
+	const sender = send(contract, gasPriceFetcher)
+	return async ({
+		property,
+		cHoldersAmountPerProperty,
+		cHoldersPrice,
+	}: {
+		property: string
+		cHoldersAmountPerProperty: string
+		cHoldersPrice: string
+	}): Promise<TransactionResponse | Error> =>
+		sender('__initLastStakeOnProperty', [
 			property,
 			cHoldersAmountPerProperty,
 			cHoldersPrice,
-			{
-				gasLimit: GAS_LIMIT,
-				gasPrice: await gasPriceFetcher(),
-			}
-		)
-		.catch(
-			txError(
-				'__initLastStakeOnProperty',
-				property,
-				cHoldersAmountPerProperty,
-				cHoldersPrice
-			)
-		)
+		])
+}
 
 export const createInitLastStakeSender = (
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
-) => async ({
-	cReward,
-	cInterestPrice,
-	cHoldersPrice,
-}: {
+): ((args: {
 	cReward: string
 	cInterestPrice: string
 	cHoldersPrice: string
-}): Promise<TransactionResponse> =>
-	contract
-		.__initLastStake(cReward, cInterestPrice, cHoldersPrice, {
-			gasLimit: GAS_LIMIT,
-			gasPrice: await gasPriceFetcher(),
-		})
-		.catch(txError('__initLastStake', cReward, cInterestPrice, cHoldersPrice))
+}) => Promise<TransactionResponse | Error>) => {
+	const sender = send(contract, gasPriceFetcher)
+	return async ({
+		cReward,
+		cInterestPrice,
+		cHoldersPrice,
+	}: {
+		cReward: string
+		cInterestPrice: string
+		cHoldersPrice: string
+	}): Promise<TransactionResponse | Error> =>
+		sender('__initLastStake', [cReward, cInterestPrice, cHoldersPrice])
+}
