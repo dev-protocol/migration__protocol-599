@@ -2,6 +2,7 @@ import {Wallet, Contract, BigNumber} from 'ethers'
 import {TransactionResponse} from '@ethersproject/abstract-provider'
 import * as ILockup from '../../build/IMigrateLockup.json'
 import {GAS_LIMIT} from './constants'
+import {txError} from './log'
 
 export const createLockup = (wallet: Wallet) => (address: string): Contract =>
 	new Contract(address, ILockup.abi, wallet)
@@ -49,7 +50,7 @@ export const createInitStakeOnPropertySender = (
 			gasLimit: GAS_LIMIT,
 			gasPrice: await gasPriceFetcher(),
 		})
-		.catch(console.info)
+		.catch(txError('__initStakeOnProperty', property, user, cInterestPrice))
 
 export const createInitLastStakeOnPropertySender = (
 	contract: Contract,
@@ -73,7 +74,14 @@ export const createInitLastStakeOnPropertySender = (
 				gasPrice: await gasPriceFetcher(),
 			}
 		)
-		.catch(console.info)
+		.catch(
+			txError(
+				'__initLastStakeOnProperty',
+				property,
+				cHoldersAmountPerProperty,
+				cHoldersPrice
+			)
+		)
 
 export const createInitLastStakeSender = (
 	contract: Contract,
@@ -92,4 +100,4 @@ export const createInitLastStakeSender = (
 			gasLimit: GAS_LIMIT,
 			gasPrice: await gasPriceFetcher(),
 		})
-		.catch(console.info)
+		.catch(txError('__initLastStake', cReward, cInterestPrice, cHoldersPrice))

@@ -2,6 +2,7 @@ import {Wallet, Contract, BigNumber} from 'ethers'
 import {TransactionResponse} from '@ethersproject/abstract-provider'
 import * as IWithdraw from '../../build/IMigrateWithdraw.json'
 import {GAS_LIMIT} from './constants'
+import {txError} from './log'
 
 export const createWithdraw = (wallet: Wallet) => (address: string): Contract =>
 	new Contract(address, IWithdraw.abi, wallet)
@@ -23,4 +24,4 @@ export const createInitLastWithdrawSender = (
 			gasLimit: GAS_LIMIT,
 			gasPrice: await gasPriceFetcher(),
 		})
-		.catch(console.info)
+		.catch(txError('__initLastWithdraw', property, user, cHoldersPrice))
