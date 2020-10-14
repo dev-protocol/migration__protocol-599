@@ -1,4 +1,4 @@
-import {Wallet, Contract, BigNumber, ethers} from 'ethers'
+import {Wallet, Contract, BigNumber} from 'ethers'
 import {TransactionReceipt} from '@ethersproject/abstract-provider'
 import * as ILockup from '../../build/IMigrateLockup.json'
 import {send} from './send'
@@ -33,7 +33,6 @@ export const createGetPropertyValue = (contract: Contract) => (
 	contract.functions.getPropertyValue(property, {blockTag: blockNumber})
 
 export const createInitStakeOnPropertySender = (
-	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
@@ -41,7 +40,7 @@ export const createInitStakeOnPropertySender = (
 	user: string
 	cInterestPrice: string
 }) => Promise<TransactionReceipt | Error>) => {
-	const sender = send(provider, contract, gasPriceFetcher)
+	const sender = send(contract, gasPriceFetcher)
 	return async ({
 		property,
 		user,
@@ -55,7 +54,6 @@ export const createInitStakeOnPropertySender = (
 }
 
 export const createInitLastStakeOnPropertySender = (
-	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
@@ -63,7 +61,7 @@ export const createInitLastStakeOnPropertySender = (
 	cHoldersAmountPerProperty: string
 	cHoldersPrice: string
 }) => Promise<TransactionReceipt | Error>) => {
-	const sender = send(provider, contract, gasPriceFetcher)
+	const sender = send(contract, gasPriceFetcher)
 	return async ({
 		property,
 		cHoldersAmountPerProperty,
@@ -81,7 +79,6 @@ export const createInitLastStakeOnPropertySender = (
 }
 
 export const createInitLastStakeSender = (
-	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ): ((args: {
@@ -89,7 +86,7 @@ export const createInitLastStakeSender = (
 	cInterestPrice: string
 	cHoldersPrice: string
 }) => Promise<TransactionReceipt | Error>) => {
-	const sender = send(provider, contract, gasPriceFetcher)
+	const sender = send(contract, gasPriceFetcher)
 	return async ({
 		cReward,
 		cInterestPrice,

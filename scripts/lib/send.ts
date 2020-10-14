@@ -1,4 +1,4 @@
-import {Contract, BigNumber, ethers} from 'ethers'
+import {Contract, BigNumber} from 'ethers'
 import {
 	TransactionReceipt,
 	TransactionResponse,
@@ -6,7 +6,6 @@ import {
 import {GAS_LIMIT} from './constants'
 
 export const send = (
-	provider: ethers.providers.BaseProvider,
 	contract: Contract,
 	gasPriceFetcher: () => Promise<string | BigNumber>
 ) => async <T>(
@@ -24,9 +23,8 @@ export const send = (
 		return gasLimit
 	}
 
-	const tx: TransactionResponse = await fn(...args, {
+	return fn(...args, {
 		gasLimit: GAS_LIMIT,
 		gasPrice: await gasPriceFetcher(),
-	})
-	return provider.waitForTransaction(tx.hash)
+	}).then(async (x: TransactionResponse) => x.wait())
 }

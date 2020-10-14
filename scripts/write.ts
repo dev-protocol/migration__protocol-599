@@ -23,27 +23,20 @@ const {
 ;(async () => {
 	if (!infura || !mnemonic || !egsToken) return
 
-	const [wallet, provider] = createWallet(infura, mnemonic)
+	const [wallet] = createWallet(infura, mnemonic)
 	const lockup = createLockup(wallet)(migrateLockupAddress)
 	const withdraw = createWithdraw(wallet)(migrateWithdrawAddress)
 	const gasPriceFetcher = ethgas(egsToken)('fastest')
 	const initStakeOnProperty = createInitStakeOnPropertySender(
-		provider,
 		lockup,
 		gasPriceFetcher
 	)
 	const initLastStakeOnProperty = createInitLastStakeOnPropertySender(
-		provider,
 		lockup,
 		gasPriceFetcher
 	)
-	const initLastStake = createInitLastStakeSender(
-		provider,
-		lockup,
-		gasPriceFetcher
-	)
+	const initLastStake = createInitLastStakeSender(lockup, gasPriceFetcher)
 	const initLastWithdraw = createInitLastWithdrawSender(
-		provider,
 		withdraw,
 		gasPriceFetcher
 	)
