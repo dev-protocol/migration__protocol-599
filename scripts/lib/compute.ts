@@ -14,7 +14,7 @@ type Rewards = {
 		total: string
 		interestPrice: string
 		holdersPrice: string
-		holdersPriceForLastWithdrawnReward: string
+		cumulativeHoldersAmountPerPropertyForLastWithdrawnReward: string
 		cumulativeHoldersAmountPerProperty: string
 	}
 }
@@ -83,7 +83,7 @@ export const compute = (records: typeof transactions): Rewards[] =>
 				})
 			}
 
-			const holdersPriceForLastWithdrawnReward = holdersPrice
+			const cumulativeHoldersAmountPerPropertyForLastWithdrawnReward = holdersPrice
 				.sub(lastCHoldersPProperty?.price ?? zero)
 				.mul(record._thePropertyStaked)
 				.add(lastCHoldersPProperty?.amount ?? zero)
@@ -98,7 +98,7 @@ export const compute = (records: typeof transactions): Rewards[] =>
 					total: mTotal.toString(),
 					interestPrice: interestPrice.toString(),
 					holdersPrice: holdersPrice.toString(),
-					holdersPriceForLastWithdrawnReward: holdersPriceForLastWithdrawnReward.toString(),
+					cumulativeHoldersAmountPerPropertyForLastWithdrawnReward: cumulativeHoldersAmountPerPropertyForLastWithdrawnReward.toString(),
 					cumulativeHoldersAmountPerProperty: cumulativeHoldersAmountPerProperty.toString(),
 				},
 			}
