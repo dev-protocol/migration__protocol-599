@@ -73,7 +73,8 @@ const {
 		(x) => async () =>
 			initLastStakeOnProperty({
 				property: x.hookedProperty,
-				cHoldersAmountPerProperty: x.rewards.cumulativeHoldersAmountPerProperty,
+				cHoldersAmountPerProperty:
+					x.rewards.cumulativeHoldersRewardAmountPerProperty,
 				cHoldersPrice: x.rewards.holdersPrice,
 			})
 	)
@@ -88,7 +89,9 @@ const {
 		initLastWithdraw({
 			property: x.hookedProperty,
 			user: x.hookedUser,
-			cHoldersPrice: x.rewards.holdersPrice,
+			cHoldersPrice:
+				x.rewards
+					.cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward,
 		})
 	)
 	const allTasks = [
