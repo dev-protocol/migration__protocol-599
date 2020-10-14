@@ -15,8 +15,8 @@ describe('scripts/lib/dry', () => {
 					total: '100000000000000000000',
 					interestPrice: '0',
 					holdersPrice: '0',
-					holdersPriceForLastWithdrawnReward: '0',
-					cumulativeHoldersAmountPerProperty: '0',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward: '0',
+					cumulativeHoldersRewardAmountPerProperty: '0',
 				},
 			},
 			{
@@ -29,8 +29,9 @@ describe('scripts/lib/dry', () => {
 					total: '200000000000000000000',
 					interestPrice: '49000000000000000000',
 					holdersPrice: '51000000000000000000',
-					holdersPriceForLastWithdrawnReward: '255000000000000000000',
-					cumulativeHoldersAmountPerProperty: '51000000000000000000',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'255000000000000000000',
+					cumulativeHoldersRewardAmountPerProperty: '51000000000000000000',
 				},
 			},
 			{
@@ -43,8 +44,9 @@ describe('scripts/lib/dry', () => {
 					total: '300000000000000000000',
 					interestPrice: '58800000000000000000',
 					holdersPrice: '61200000000000000000',
-					holdersPriceForLastWithdrawnReward: '183600000000000000000',
-					cumulativeHoldersAmountPerProperty: '0',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'183600000000000000000',
+					cumulativeHoldersRewardAmountPerProperty: '0',
 				},
 			},
 			{
@@ -57,8 +59,9 @@ describe('scripts/lib/dry', () => {
 					total: '400000000000000000000',
 					interestPrice: '64925000000000000000',
 					holdersPrice: '67575000000000000000',
-					holdersPriceForLastWithdrawnReward: '117300000000000000000',
-					cumulativeHoldersAmountPerProperty: '133875000000000000000',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'117300000000000000000',
+					cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 				},
 			},
 			{
@@ -71,8 +74,9 @@ describe('scripts/lib/dry', () => {
 					total: '500000000000000000000',
 					interestPrice: '71925000000000000000',
 					holdersPrice: '74860714285714285714',
-					holdersPriceForLastWithdrawnReward: '163017857142857142856',
-					cumulativeHoldersAmountPerProperty: '163017857142857142856',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'163017857142857142856',
+					cumulativeHoldersRewardAmountPerProperty: '163017857142857142856',
 				},
 			},
 			{
@@ -85,8 +89,9 @@ describe('scripts/lib/dry', () => {
 					total: '400000000000000000000',
 					interestPrice: '64925000000000000000',
 					holdersPrice: '67575000000000000000',
-					holdersPriceForLastWithdrawnReward: '117300000000000000000',
-					cumulativeHoldersAmountPerProperty: '133875000000000000000',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'117300000000000000000',
+					cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 				},
 			},
 			{
@@ -99,8 +104,9 @@ describe('scripts/lib/dry', () => {
 					total: '500000000000000000000',
 					interestPrice: '71925000000000000000',
 					holdersPrice: '74860714285714285714',
-					holdersPriceForLastWithdrawnReward: '163017857142857142856',
-					cumulativeHoldersAmountPerProperty: '163017857142857142856',
+					cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+						'163017857142857142856',
+					cumulativeHoldersRewardAmountPerProperty: '163017857142857142856',
 				},
 			},
 		] as unknown) as typeof computedRecords
@@ -117,8 +123,9 @@ describe('scripts/lib/dry', () => {
 						total: '400000000000000000000',
 						interestPrice: '64925000000000000000',
 						holdersPrice: '67575000000000000000',
-						holdersPriceForLastWithdrawnReward: '117300000000000000000',
-						cumulativeHoldersAmountPerProperty: '133875000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'117300000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 					},
 				},
 				{
@@ -131,8 +138,9 @@ describe('scripts/lib/dry', () => {
 						total: '200000000000000000000',
 						interestPrice: '49000000000000000000',
 						holdersPrice: '51000000000000000000',
-						holdersPriceForLastWithdrawnReward: '255000000000000000000',
-						cumulativeHoldersAmountPerProperty: '51000000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'255000000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '51000000000000000000',
 					},
 				},
 				{
@@ -145,8 +153,9 @@ describe('scripts/lib/dry', () => {
 						total: '300000000000000000000',
 						interestPrice: '58800000000000000000',
 						holdersPrice: '61200000000000000000',
-						holdersPriceForLastWithdrawnReward: '183600000000000000000',
-						cumulativeHoldersAmountPerProperty: '0',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'183600000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '0',
 					},
 				},
 				{
@@ -159,8 +168,9 @@ describe('scripts/lib/dry', () => {
 						total: '400000000000000000000',
 						interestPrice: '64925000000000000000',
 						holdersPrice: '67575000000000000000',
-						holdersPriceForLastWithdrawnReward: '117300000000000000000',
-						cumulativeHoldersAmountPerProperty: '133875000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'117300000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 					},
 				},
 			],
@@ -175,8 +185,9 @@ describe('scripts/lib/dry', () => {
 						total: '400000000000000000000',
 						interestPrice: '64925000000000000000',
 						holdersPrice: '67575000000000000000',
-						holdersPriceForLastWithdrawnReward: '117300000000000000000',
-						cumulativeHoldersAmountPerProperty: '133875000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'117300000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 					},
 				},
 				{
@@ -189,8 +200,9 @@ describe('scripts/lib/dry', () => {
 						total: '300000000000000000000',
 						interestPrice: '58800000000000000000',
 						holdersPrice: '61200000000000000000',
-						holdersPriceForLastWithdrawnReward: '183600000000000000000',
-						cumulativeHoldersAmountPerProperty: '0',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'183600000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '0',
 					},
 				},
 				{
@@ -203,8 +215,9 @@ describe('scripts/lib/dry', () => {
 						total: '400000000000000000000',
 						interestPrice: '64925000000000000000',
 						holdersPrice: '67575000000000000000',
-						holdersPriceForLastWithdrawnReward: '117300000000000000000',
-						cumulativeHoldersAmountPerProperty: '133875000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'117300000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 					},
 				},
 			],
@@ -219,8 +232,9 @@ describe('scripts/lib/dry', () => {
 						total: '400000000000000000000',
 						interestPrice: '64925000000000000000',
 						holdersPrice: '67575000000000000000',
-						holdersPriceForLastWithdrawnReward: '117300000000000000000',
-						cumulativeHoldersAmountPerProperty: '133875000000000000000',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'117300000000000000000',
+						cumulativeHoldersRewardAmountPerProperty: '133875000000000000000',
 					},
 				},
 			],
@@ -235,8 +249,9 @@ describe('scripts/lib/dry', () => {
 						total: '500000000000000000000',
 						interestPrice: '71925000000000000000',
 						holdersPrice: '74860714285714285714',
-						holdersPriceForLastWithdrawnReward: '163017857142857142856',
-						cumulativeHoldersAmountPerProperty: '163017857142857142856',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'163017857142857142856',
+						cumulativeHoldersRewardAmountPerProperty: '163017857142857142856',
 					},
 				},
 				{
@@ -249,8 +264,9 @@ describe('scripts/lib/dry', () => {
 						total: '500000000000000000000',
 						interestPrice: '71925000000000000000',
 						holdersPrice: '74860714285714285714',
-						holdersPriceForLastWithdrawnReward: '163017857142857142856',
-						cumulativeHoldersAmountPerProperty: '163017857142857142856',
+						cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward:
+							'163017857142857142856',
+						cumulativeHoldersRewardAmountPerProperty: '163017857142857142856',
 					},
 				},
 			],
