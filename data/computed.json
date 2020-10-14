@@ -13424,5 +13424,47 @@
 			"cumulativeHoldersRewardAmountPerProperty": "3015138356936033391110399000000000000000",
 			"cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward": "3014517259686370237972219000000000000000"
 		}
+	},
+	{
+		"transactionHash": "0xa0b42f7b7095b0c7374f847b5bb214668e954af98f8cd75fbbf42bf5398efd53",
+		"blockNumber": 11053130,
+		"action": "unstake",
+		"hookedUser": "0x1bAd1783ab45Cf35fF439Ac9258748229F295845",
+		"hookedProperty": "0x44d871aebf0126bf646753e2c976aa7e68a66c15",
+		"rewards": {
+			"total": "109012022292360328749405000000000000000000",
+			"interestPrice": "188426019929102794",
+			"holdersPrice": "196116877885391846",
+			"cumulativeHoldersRewardAmountPerProperty": "15491897339233550689156655010249358900717",
+			"cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward": "15489784481659246383156655010249358900717"
+		}
+	},
+	{
+		"transactionHash": "0xc90c7703276ac6a5bbb2be8213118967e8e6b6bb67d3a09f4c85260ca733240d",
+		"blockNumber": 11053136,
+		"action": "stake",
+		"hookedUser": "0x1bAd1783ab45Cf35fF439Ac9258748229F295845",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"total": "109012885157099057341467000000000000000000",
+			"interestPrice": "188426968228227921",
+			"holdersPrice": "196117864890603712",
+			"cumulativeHoldersRewardAmountPerProperty": "4278292352395601804201301506416000000000",
+			"cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward": "4279500285096338535313301506416000000000"
+		}
+	},
+	{
+		"transactionHash": "0x7f7b16c59ef73780e3bad7b54bca3331a0556d3c1c992a68c99e1d87ff48f5e1",
+		"blockNumber": 11054231,
+		"action": "stake",
+		"hookedUser": "0x003005b0C7E9791Cc34469D8B1d9DA8a82796bf9",
+		"hookedProperty": "0x90168f9ba07b95f629f8b77f789d46a549d6470f",
+		"rewards": {
+			"total": "109170251754071744635857000000000000000000",
+			"interestPrice": "188599498548310994",
+			"holdersPrice": "196297437264567726",
+			"cumulativeHoldersRewardAmountPerProperty": "4298249801554537627747400106416000000000",
+			"cumulativeHoldersRewardAmountPerPropertyForLastWithdrawnReward": "4298390239828819411582102028936000000000"
+		}
 	}
 ]
