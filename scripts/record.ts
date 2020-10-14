@@ -24,6 +24,7 @@ const {
 	MNEMONIC: mnemonic,
 	CONFIG: configAddress = '0x1d415aa39d647834786eb9b5a333a50e9935b796',
 	PROPERTY_GROUP: propertyGroupAddress = '0x7ba9c52453d2520e1484f99ae5b2e800cd781aa5',
+	TO_BLOCK: toBlock = '11056363',
 } = process.env
 
 ;(async () => {
@@ -39,8 +40,12 @@ const {
 		lockupFactory
 	)
 
-	const devTransferLogs = await devTransfers(infura, mnemonic)
-	const propertyTransferLogs = await propertyTransfers(infura, mnemonic)
+	const devTransferLogs = await devTransfers(infura, mnemonic, toBlock)
+	const propertyTransferLogs = await propertyTransfers(
+		infura,
+		mnemonic,
+		toBlock
+	)
 	console.log(
 		'devTransferLogs',
 		devTransferLogs.length,

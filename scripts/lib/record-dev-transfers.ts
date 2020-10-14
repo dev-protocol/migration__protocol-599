@@ -13,15 +13,16 @@ const {
 
 export const devTransfers = async (
 	infura: string,
-	mnemonic: string
+	mnemonic: string,
+	_toBlock: string
 ): Promise<Log[]> => {
 	const [wallet, provider] = createWallet(infura, mnemonic)
 	const dev = createToken(wallet)(devAddress)
 
 	const event = dev.filters.Transfer()
-	const currentBlockNumber = await provider.getBlockNumber()
+	const to = Number(_toBlock)
 	const fromBlockNumber = Number(fromBlock)
-	const blocksBase = arrayBetween(fromBlockNumber, currentBlockNumber, 1000)
+	const blocksBase = arrayBetween(fromBlockNumber, to, 1000)
 	const blocks = blocksBase.map((x, i) => ({
 		...{
 			fromBlock: x,

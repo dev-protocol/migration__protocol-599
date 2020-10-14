@@ -54,7 +54,8 @@ const fetchAllProperties = async () =>
 
 export const propertyTransfers = async (
 	infura: string,
-	mnemonic: string
+	mnemonic: string,
+	_toBlock: string
 ): Promise<Log[]> => {
 	const [wallet, provider] = createWallet(infura, mnemonic)
 
@@ -62,11 +63,14 @@ export const propertyTransfers = async (
 
 	const allProperties = await fetchAllProperties()
 
+	const toBlock = Number(_toBlock)
 	const allEventFilters = allProperties.map(({property}) =>
 		propertyInterfaceFactory(property).filters.Transfer()
 	)
 	const allEventLogs = await queueAll('allPropertyTransfers')(
-		allEventFilters.map((filter) => async () => provider.getLogs(filter))
+		allEventFilters.map((filter) => async () =>
+			provider.getLogs({...filter, toBlock})
+		)
 	)
 
 	return allEventLogs.flat()
