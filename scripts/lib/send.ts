@@ -3,7 +3,10 @@ import {
 	TransactionReceipt,
 	TransactionResponse,
 } from '@ethersproject/abstract-provider'
-import {GAS_LIMIT} from './constants'
+import {EXPECTED_ERROR_MESSAGE, GAS_LIMIT} from './constants'
+
+const ERROR =
+	'cannot estimate gas; transaction may fail or may require manual gas limit'
 
 export const send = (
 	contract: Contract,
@@ -19,12 +22,19 @@ export const send = (
 		.then((x: BigNumber) => x)
 		.catch((err: Error) => (err instanceof Error ? err : new Error(err)))
 	if (gasLimit instanceof Error) {
-		console.log('An error is expected', gasLimit.message, method, args)
-		return gasLimit
+		const err = gasLimit
+		const isExpectedError = err.message.includes(ERROR)
+		console.log(
+			`An error is expected: `,
+			isExpectedError ? ERROR : err.message,
+			method,
+			args
+		)
+		return isExpectedError ? new Error(EXPECTED_ERROR_MESSAGE) : err
 	}
 
 	return fn(...args, {
-		gasLimit: GAS_LIMIT,
+		gasLimit,
 		gasPrice: await gasPriceFetcher(),
 	}).then(async (x: TransactionResponse) => x.wait())
 }

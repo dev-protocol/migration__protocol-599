@@ -10,6 +10,8 @@ import Queue from 'p-queue'
 import records from '../data/dry.json'
 import {createInitLastWithdrawSender, createWithdraw} from './lib/withdraw'
 import {ethgas} from './lib/ethgas'
+import pRetry from 'p-retry'
+import {EXPECTED_ERROR_MESSAGE} from './lib/constants'
 config()
 
 const {
@@ -94,5 +96,34 @@ const {
 		...initLastWithdrawTasks,
 	]
 
-	await queue.addAll(allTasks)
+	const results = await queue.addAll(
+		allTasks.map((task) => async () =>
+			pRetry(task, {
+				retries: 2,
+				minTimeout: 1000 * 15,
+				onFailedAttempt: (error) => {
+					console.log(
+						`Attempt ${error.attemptNumber} failed. There are ${error.retriesLeft} retries left.`
+					)
+				},
+			})
+		)
+	)
+	console.log('------------------------')
+	console.log('All Tasks: ', allTasks.length)
+	console.log('Results: ', results.length)
+	console.log('Sent: ', results.filter((x) => !(x instanceof Error)).length)
+	console.log(
+		'Failed: ',
+		results.filter(
+			(x) => x instanceof Error && x.message !== EXPECTED_ERROR_MESSAGE
+		).length
+	)
+	console.log(
+		'Already Completed: ',
+		results.filter(
+			(x) => x instanceof Error && x.message === EXPECTED_ERROR_MESSAGE
+		).length
+	)
+	console.log('------------------------')
 })().catch(console.error)

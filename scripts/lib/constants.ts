@@ -13,3 +13,5 @@ export const ACTIONS = {
 	UNSTAKE: 'unstake',
 	WITHDRAW: 'withdraw',
 }
+
+export const EXPECTED_ERROR_MESSAGE = 'completed'
